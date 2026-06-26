@@ -1,0 +1,62 @@
+\doxysection{Music\+Box.\+h}
+\hypertarget{_music_box_8h_source}{}\label{_music_box_8h_source}\mbox{\hyperlink{_music_box_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MUSICBOX\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MUSICBOX\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_rotation_sink_8h}{IRotationSink.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_polygon_8h}{Polygon.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cylinder_8h}{Cylinder.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <wx/sound.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_music_box}{MusicBox}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_rotation_sink}{IRotationSink}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mPolygon;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \mbox{\hyperlink{classcse335_1_1_cylinder}{cse335::Cylinder}}\ mCylinder;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \textcolor{keywordtype}{double}\ mRotation\ =\ 0.0;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ std::wstring\ mAudioDir;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ std::wstring\ mSongFile;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ std::wstring\ mSongName;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \textcolor{keywordtype}{double}\ mCurrentBeat\ =\ 0.0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ std::map<double,\ std::wstring>\ mBeatsToNotes;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ std::map<std::wstring,\ std::wstring>\ mNotesToSongs;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \textcolor{keywordtype}{double}\ mBeat\ =\ 0.0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \mbox{\hyperlink{class_music_box_a4edb14279d194262e614321495b8defd}{MusicBox}}(std::wstring\ ResourcesDir,\ std::wstring\ songFile);}
+\DoxyCodeLine{00061\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_box_adf353b031c74f47b0e70e7d91662482f}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_box_af93c98b919bd12a5c90e9de95efa353b}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_box_aed10aaec1a1069ed26a13e212a8ccd1f}{UpdateRotation}}(\textcolor{keywordtype}{double}\ angle)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_box_ad789cdd5b2627dbe37203e4873be2141}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_box_a412a0c20ef034f272bda84829d270508}{XmlLoad}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_box_a5bd85ac72b7526ec246a5c9a4d9a58fb}{PlaySound}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MUSICBOX\_H}}
+
+\end{DoxyCode}

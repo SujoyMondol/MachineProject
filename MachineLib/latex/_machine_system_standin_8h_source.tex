@@ -1,0 +1,41 @@
+\doxysection{Machine\+System\+Standin.\+h}
+\hypertarget{_machine_system_standin_8h_source}{}\label{_machine_system_standin_8h_source}\mbox{\hyperlink{_machine_system_standin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CANADIANEXPERIENCE\_MACHINELIB\_MACHINESYSTEMSTANDIN\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CANADIANEXPERIENCE\_MACHINELIB\_MACHINESYSTEMSTANDIN\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_machine_system_8h}{IMachineSystem.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_machine_standin}{MachineStandin}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_machine_system_standin}{MachineSystemStandin}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_machine_system}{IMachineSystem}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ std::shared\_ptr<MachineStandin>\ mStandin;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_machine_system_standin_ac25e4e3f6a65fb4064494c07ce300224}{MachineSystemStandin}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_machine_system_standin_a0a52cc7368d913f0012ac018523525b7}{MachineSystemStandin}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine_system_standin}{MachineSystemStandin}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_standin_a9c47faf7dbd231608087b67c73dde387}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine_system_standin}{MachineSystemStandin}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_standin_aa3e3775201c0ef2da35d4a0cab353cc6}{SetLocation}}(wxPoint\ location);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ wxPoint\ \mbox{\hyperlink{class_machine_system_standin_acd7532dd117367407eb8240cde10b4b9}{GetLocation}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_standin_a22fac55e7a19120ec19149c312e13fe8}{DrawMachine}}(std::shared\_ptr<wxGraphicsContext>\ graphics);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_standin_abefb2809dd34208f46b48acabd562fab}{SetMachineFrame}}(\textcolor{keywordtype}{int}\ frame);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_standin_afad873f101a266b451e6ccadf0fc2fe7}{SetFrameRate}}(\textcolor{keywordtype}{double}\ rate);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_standin_ae6c5013b9068e23fe193db40a07c2b1e}{ChooseMachine}}(\textcolor{keywordtype}{int}\ machine);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_machine_system_standin_aee42aad117a3fb1f2b5b9663141b40e7}{GetMachineNumber}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_machine_system_standin_adc16fb107586015ebf592c2cddb421a0}{GetMachineTime}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_standin_acc7f3a48bb518e241f7abd36481e709b}{SetFlag}}(\textcolor{keywordtype}{int}\ flag)\ \{\}}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CANADIANEXPERIENCE\_MACHINELIB\_MACHINESYSTEMSTANDIN\_H}}
+
+\end{DoxyCode}

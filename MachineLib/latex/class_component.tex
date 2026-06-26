@@ -1,0 +1,181 @@
+\doxysection{Component Class Reference}
+\hypertarget{class_component}{}\label{class_component}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+Inheritance diagram for Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Reset}} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function for resetting a component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+virtual void \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Advance}} (double time)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for the compoenents in the machine 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_component_a1a16957bf5c97251de7babaf3622aecd}\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily \label{class_component_a1a16957bf5c97251de7babaf3622aecd} 
+Component\+::\+Component (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{}\end{DoxyParamCaption})}
+
+Base constructor for creating a component 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources directory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}\index{Component@{Component}!Advance@{Advance}}
+\index{Advance@{Advance}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_component_adeb2c552de6fae5ddba728a6ee0f52cd} 
+virtual void Component\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Virtual function to update the component 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_banner_a43b9efacd3ddcbfeb49eff328e6bc469}{Banner}}, \mbox{\hyperlink{class_box_ae2ea91a5459bbd2f26c2bbb16bde1158}{Box}}, \mbox{\hyperlink{class_cam_acf88ef4f75c08c475c42db66905caf9d}{Cam}}, \mbox{\hyperlink{class_crank_abcef2b36e7ad7580f76681eafd02a010}{Crank}}, \mbox{\hyperlink{class_music_box_ad789cdd5b2627dbe37203e4873be2141}{Music\+Box}}, \mbox{\hyperlink{class_pulley_a5a7cc9baacaff75051654670d312b7f0}{Pulley}}, \mbox{\hyperlink{class_shaft_ae7e14cee5cc3ffc3a1713637e6e51499}{Shaft}}, and \mbox{\hyperlink{class_sparty_a494487efd51ede4a0b75fa3c6cf3cea8}{Sparty}}.
+
+\Hypertarget{class_component_a6a6490d9e5050b4a53718e037f94f28c}\index{Component@{Component}!Draw@{Draw}}
+\index{Draw@{Draw}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_component_a6a6490d9e5050b4a53718e037f94f28c} 
+virtual void Component\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Abstract function to draw the component \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation of this object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_banner_ae450f11e323861794c0c5a59f6d943a2}{Banner}}, \mbox{\hyperlink{class_box_a33730a8ac042e24f1363feb495f607d9}{Box}}, \mbox{\hyperlink{class_cam_a08b9d49ac27a6402cd962dd19d6193ab}{Cam}}, \mbox{\hyperlink{class_crank_aa7b49d2b57d474b64d342c66ccc6a79c}{Crank}}, \mbox{\hyperlink{class_music_box_adf353b031c74f47b0e70e7d91662482f}{Music\+Box}}, \mbox{\hyperlink{class_pulley_a0e7e667e6923986666c91773ed546d67}{Pulley}}, \mbox{\hyperlink{class_shaft_a2eca5b0fc08a3ce911bb888038843009}{Shaft}}, and \mbox{\hyperlink{class_sparty_ad190f1fee82ba994e5d4938feb2d4439}{Sparty}}.
+
+\Hypertarget{class_component_a97b1036a256e5fc0133167b4f9b4081b}\index{Component@{Component}!GetImagesDir@{GetImagesDir}}
+\index{GetImagesDir@{GetImagesDir}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetImagesDir()}{GetImagesDir()}}
+{\footnotesize\ttfamily \label{class_component_a97b1036a256e5fc0133167b4f9b4081b} 
+std\+::wstring Component\+::\+Get\+Images\+Dir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the images directory for the component \begin{DoxyReturn}{Returns}
+the images directory for the component 
+\end{DoxyReturn}
+\Hypertarget{class_component_a42cd4e931222661802597125bfc8d28b}\index{Component@{Component}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \label{class_component_a42cd4e931222661802597125bfc8d28b} 
+wx\+Point Component\+::\+Get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the position of the component \begin{DoxyReturn}{Returns}
+the position of the component 
+\end{DoxyReturn}
+\Hypertarget{class_component_a231f37626a6760c59fe4cd2a52222694}\index{Component@{Component}!Reset@{Reset}}
+\index{Reset@{Reset}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_component_a231f37626a6760c59fe4cd2a52222694} 
+virtual void Component\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function for resetting a component. 
+
+
+
+Implemented in \mbox{\hyperlink{class_banner_a4f6a6733ba0a1e479aa053e6eac58520}{Banner}}, \mbox{\hyperlink{class_box_ae2b626dd9a4e69619de23e339ede5bfa}{Box}}, \mbox{\hyperlink{class_cam_ab7ec8914d2234803b1b57063714ba2da}{Cam}}, \mbox{\hyperlink{class_crank_a437d87584ec61a1687181dd001fd97ea}{Crank}}, \mbox{\hyperlink{class_music_box_af93c98b919bd12a5c90e9de95efa353b}{Music\+Box}}, \mbox{\hyperlink{class_pulley_a8509d1a7a72405e505847b2245bc9594}{Pulley}}, \mbox{\hyperlink{class_shaft_af0829d7b05074a0cacaaad5190a427ff}{Shaft}}, and \mbox{\hyperlink{class_sparty_a9d9bc66bb32b4480198902f5dba52993}{Sparty}}.
+
+\Hypertarget{class_component_ad492f16187d49151d3b6403bbadb685a}\index{Component@{Component}!SetFrame@{SetFrame}}
+\index{SetFrame@{SetFrame}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetFrame()}{SetFrame()}}
+{\footnotesize\ttfamily \label{class_component_ad492f16187d49151d3b6403bbadb685a} 
+virtual void Component\+::\+Set\+Frame (\begin{DoxyParamCaption}\item[{double}]{frame}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Set the frame of the component 
+\begin{DoxyParams}{Parameters}
+{\em frame} & frame to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_af46ab1e758de59cecf5c1c08bb9867ea}\index{Component@{Component}!SetInitialPosition@{SetInitialPosition}}
+\index{SetInitialPosition@{SetInitialPosition}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetInitialPosition()}{SetInitialPosition()}}
+{\footnotesize\ttfamily \label{class_component_af46ab1e758de59cecf5c1c08bb9867ea} 
+virtual void Component\+::\+Set\+Initial\+Position (\begin{DoxyParamCaption}\item[{wx\+Point}]{point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Set Initial Position for \doxylink{class_component}{Component} \Hypertarget{class_component_a3ab24fc52fb5b6b2242064f93327de4e}\index{Component@{Component}!SetMachine@{SetMachine}}
+\index{SetMachine@{SetMachine}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetMachine()}{SetMachine()}}
+{\footnotesize\ttfamily \label{class_component_a3ab24fc52fb5b6b2242064f93327de4e} 
+void Component\+::\+Set\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}}]{machine}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the machine of the compoent 
+\begin{DoxyParams}{Parameters}
+{\em machine} & machine to set to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_ac2a73386ef34a64aeff1904dda2303b8}\index{Component@{Component}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily \label{class_component_ac2a73386ef34a64aeff1904dda2303b8} 
+void Component\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{wx\+Point}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the position of the component 
+\begin{DoxyParams}{Parameters}
+{\em position} & position to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}\index{Component@{Component}!SetTime@{SetTime}}
+\index{SetTime@{SetTime}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{SetTime()}{SetTime()}}
+{\footnotesize\ttfamily \label{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1} 
+virtual void Component\+::\+Set\+Time (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Set the time of the component 
+\begin{DoxyParams}{Parameters}
+{\em time} & time to be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_component_8h}{Component.\+h}}\item 
+\mbox{\hyperlink{_component_8cpp}{Component.\+cpp}}\end{DoxyCompactItemize}

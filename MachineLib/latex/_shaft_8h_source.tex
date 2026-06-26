@@ -1,0 +1,67 @@
+\doxysection{Shaft.\+h}
+\hypertarget{_shaft_8h_source}{}\label{_shaft_8h_source}\mbox{\hyperlink{_shaft_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SHAFT\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SHAFT\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cylinder_8h}{Cylinder.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_rotation_sink_8h}{IRotationSink.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rotation_source_8h}{RotationSource.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shaft}{Shaft}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_rotation_sink}{IRotationSink}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \textcolor{keywordtype}{double}\ mRotationAngle;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \textcolor{keywordtype}{double}\ mRotationSpeed;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \textcolor{keywordtype}{bool}\ isRotating\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \mbox{\hyperlink{classcse335_1_1_cylinder}{cse335::Cylinder}}\ mCylinder;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \textcolor{keywordtype}{int}\ mLength;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \mbox{\hyperlink{class_rotation_source}{RotationSource}}\ mSource;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \mbox{\hyperlink{class_shaft}{Shaft}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \mbox{\hyperlink{class_shaft}{Shaft}}(std::wstring\ resourcesDir,\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_ab8d509d571d8c3faaba6cfec99a0f60f}{DrawShaft}}(std::shared\_ptr<wxGraphicsContext>\ graphics);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_a1f54fe505c1d460324925931d22f2003}{SetRotationSpeed}}(\textcolor{keywordtype}{double}\ speed)\ \{\ mRotationSpeed\ =\ speed;\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_a4342f230aedeb8b246ea031737bbb943}{Rotate}}(\textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_aae5693c75d7e433ad1f0e5d7d2ee07f9}{ToggleRotation}}()\ \{\ mRotationAngle\ =\ !mRotationAngle;\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_af0829d7b05074a0cacaaad5190a427ff}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_a2eca5b0fc08a3ce911bb888038843009}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_a63b6783c1b46b464c1a8d33d61668b2e}{UpdateRotation}}(\textcolor{keywordtype}{double}\ angle)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shaft_ae7e14cee5cc3ffc3a1713637e6e51499}{Advance}}(\textcolor{keywordtype}{double}\ time);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \mbox{\hyperlink{class_rotation_source}{RotationSource}}*\ \mbox{\hyperlink{class_shaft_a210935dfcc239596c6df7019d13eda77}{GetRotationSource}}()\ \{\ \textcolor{keywordflow}{return}\ \&mSource;\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SHAFT\_H}}
+
+\end{DoxyCode}

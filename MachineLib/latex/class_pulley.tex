@@ -1,0 +1,190 @@
+\doxysection{Pulley Class Reference}
+\hypertarget{class_pulley}{}\label{class_pulley}\index{Pulley@{Pulley}}
+
+
+{\ttfamily \#include $<$Pulley.\+h$>$}
+
+Inheritance diagram for Pulley\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pulley}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pulley_a78a6b822afd0e5486c8ba4a4a67660ff}{Pulley}} (std\+::wstring resources\+Dir, int diameter)
+\item 
+void \mbox{\hyperlink{class_pulley_a0e7e667e6923986666c91773ed546d67}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_pulley_a8509d1a7a72405e505847b2245bc9594}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_pulley_a50457dab3f78b732818e0951d3e91a96}{Update\+Rotation}} (double angle) override
+\item 
+void \mbox{\hyperlink{class_pulley_a37078f29bb75d896879558d43d13f882}{Set\+Driven}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pulley}{Pulley}} $>$ pulley)
+\item 
+int \mbox{\hyperlink{class_pulley_a9b28895419c2dc8ffbc37052761c48a5}{Get\+Diameter}} ()
+\item 
+\mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_pulley_afb94b2364f7084138ecde1cbc2847d73}{Get\+Source}} ()
+\item 
+void \mbox{\hyperlink{class_pulley_a96b877713f9571aad63a976f1d03c776}{Set\+Stripe}} ()
+\item 
+void \mbox{\hyperlink{class_pulley_a5a7cc9baacaff75051654670d312b7f0}{Advance}} (double time) override
+\item 
+void \mbox{\hyperlink{class_pulley_a9366438ff788aa5cd0aeb1c49c561b64}{Set\+Offset\+Factor}} (double factor)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_rotation_sink}{IRotation\+Sink}}}
+
+
+\doxysubsection{Detailed Description}
+Class for the pulley component 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pulley_a78a6b822afd0e5486c8ba4a4a67660ff}\index{Pulley@{Pulley}!Pulley@{Pulley}}
+\index{Pulley@{Pulley}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{Pulley()}{Pulley()}}
+{\footnotesize\ttfamily \label{class_pulley_a78a6b822afd0e5486c8ba4a4a67660ff} 
+Pulley\+::\+Pulley (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{, }\item[{int}]{diameter}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources Directory \\
+\hline
+{\em diameter} & diameter for this pulley \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pulley_a5a7cc9baacaff75051654670d312b7f0}\index{Pulley@{Pulley}!Advance@{Advance}}
+\index{Advance@{Advance}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_pulley_a5a7cc9baacaff75051654670d312b7f0} 
+void Pulley\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the pulley 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_pulley_a0e7e667e6923986666c91773ed546d67}\index{Pulley@{Pulley}!Draw@{Draw}}
+\index{Draw@{Draw}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_pulley_a0e7e667e6923986666c91773ed546d67} 
+void Pulley\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the pulley 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation for this pulley \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_pulley_a9b28895419c2dc8ffbc37052761c48a5}\index{Pulley@{Pulley}!GetDiameter@{GetDiameter}}
+\index{GetDiameter@{GetDiameter}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{GetDiameter()}{GetDiameter()}}
+{\footnotesize\ttfamily \label{class_pulley_a9b28895419c2dc8ffbc37052761c48a5} 
+int Pulley\+::\+Get\+Diameter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the diameter of this pulley \begin{DoxyReturn}{Returns}
+diameter of this pulley 
+\end{DoxyReturn}
+\Hypertarget{class_pulley_afb94b2364f7084138ecde1cbc2847d73}\index{Pulley@{Pulley}!GetSource@{GetSource}}
+\index{GetSource@{GetSource}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{GetSource()}{GetSource()}}
+{\footnotesize\ttfamily \label{class_pulley_afb94b2364f7084138ecde1cbc2847d73} 
+\mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \texorpdfstring{$\ast$}{*} Pulley\+::\+Get\+Source (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the rotation source of this pulley \begin{DoxyReturn}{Returns}
+rotation source of this pulley 
+\end{DoxyReturn}
+\Hypertarget{class_pulley_a8509d1a7a72405e505847b2245bc9594}\index{Pulley@{Pulley}!Reset@{Reset}}
+\index{Reset@{Reset}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_pulley_a8509d1a7a72405e505847b2245bc9594} 
+void Pulley\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset the pulley 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+\Hypertarget{class_pulley_a37078f29bb75d896879558d43d13f882}\index{Pulley@{Pulley}!SetDriven@{SetDriven}}
+\index{SetDriven@{SetDriven}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{SetDriven()}{SetDriven()}}
+{\footnotesize\ttfamily \label{class_pulley_a37078f29bb75d896879558d43d13f882} 
+void Pulley\+::\+Set\+Driven (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pulley}{Pulley}} $>$}]{pulley}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the driven pulley 
+\begin{DoxyParams}{Parameters}
+{\em pulley} & pulley being driven by this pulley \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pulley_a9366438ff788aa5cd0aeb1c49c561b64}\index{Pulley@{Pulley}!SetOffsetFactor@{SetOffsetFactor}}
+\index{SetOffsetFactor@{SetOffsetFactor}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{SetOffsetFactor()}{SetOffsetFactor()}}
+{\footnotesize\ttfamily \label{class_pulley_a9366438ff788aa5cd0aeb1c49c561b64} 
+void Pulley\+::\+Set\+Offset\+Factor (\begin{DoxyParamCaption}\item[{double}]{factor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the offset factor for the stripes 
+\begin{DoxyParams}{Parameters}
+{\em factor} & factor to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pulley_a96b877713f9571aad63a976f1d03c776}\index{Pulley@{Pulley}!SetStripe@{SetStripe}}
+\index{SetStripe@{SetStripe}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{SetStripe()}{SetStripe()}}
+{\footnotesize\ttfamily \label{class_pulley_a96b877713f9571aad63a976f1d03c776} 
+void Pulley\+::\+Set\+Stripe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set stripes on the belt \Hypertarget{class_pulley_a50457dab3f78b732818e0951d3e91a96}\index{Pulley@{Pulley}!UpdateRotation@{UpdateRotation}}
+\index{UpdateRotation@{UpdateRotation}!Pulley@{Pulley}}
+\doxysubsubsection{\texorpdfstring{UpdateRotation()}{UpdateRotation()}}
+{\footnotesize\ttfamily \label{class_pulley_a50457dab3f78b732818e0951d3e91a96} 
+void Pulley\+::\+Update\+Rotation (\begin{DoxyParamCaption}\item[{double}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the angle of pulley and the stripe offsets 
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle to be set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_rotation_sink_a988fc6d56068045851c9c430d1d02fc0}{IRotation\+Sink}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_pulley_8h}{Pulley.\+h}}\item 
+\mbox{\hyperlink{_pulley_8cpp}{Pulley.\+cpp}}\end{DoxyCompactItemize}

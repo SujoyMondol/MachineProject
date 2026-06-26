@@ -1,0 +1,53 @@
+\doxysection{Rotation\+Source Class Reference}
+\hypertarget{class_rotation_source}{}\label{class_rotation_source}\index{RotationSource@{RotationSource}}
+
+
+{\ttfamily \#include $<$Rotation\+Source.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_rotation_source_a2a0bf9d36ce60099a378792c2c1b58df}\label{class_rotation_source_a2a0bf9d36ce60099a378792c2c1b58df} 
+{\bfseries Rotation\+Source} (const \mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor (disabled) \end{DoxyCompactList}\item 
+\Hypertarget{class_rotation_source_acd4b26bcc29b16ba3b4fbad3e40c003b}\label{class_rotation_source_acd4b26bcc29b16ba3b4fbad3e40c003b} 
+void {\bfseries operator=} (const \mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Assignment operator (disabled) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotation_source_a2b9fd05631e0165aa32602c83452349f}{Set\+Rotation}} (double angle)
+\item 
+void \mbox{\hyperlink{class_rotation_source_a8da6a3af54026cd2fc6d8b702e04dd6c}{Add\+Sink}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_rotation_sink}{IRotation\+Sink}} $>$ sink)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for Rotation Source 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rotation_source_a8da6a3af54026cd2fc6d8b702e04dd6c}\index{RotationSource@{RotationSource}!AddSink@{AddSink}}
+\index{AddSink@{AddSink}!RotationSource@{RotationSource}}
+\doxysubsubsection{\texorpdfstring{AddSink()}{AddSink()}}
+{\footnotesize\ttfamily \label{class_rotation_source_a8da6a3af54026cd2fc6d8b702e04dd6c} 
+void Rotation\+Source\+::\+Add\+Sink (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_rotation_sink}{IRotation\+Sink}} $>$}]{sink}{}\end{DoxyParamCaption})}
+
+Add a rotation sink for the rotation source 
+\begin{DoxyParams}{Parameters}
+{\em sink} & sink to be added to sinks \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rotation_source_a2b9fd05631e0165aa32602c83452349f}\index{RotationSource@{RotationSource}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!RotationSource@{RotationSource}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily \label{class_rotation_source_a2b9fd05631e0165aa32602c83452349f} 
+void Rotation\+Source\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{double}]{angle}{}\end{DoxyParamCaption})}
+
+Set the rotation of the sinks 
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle to be set to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rotation_source_8h}{Rotation\+Source.\+h}}\item 
+\mbox{\hyperlink{_rotation_source_8cpp}{Rotation\+Source.\+cpp}}\end{DoxyCompactItemize}

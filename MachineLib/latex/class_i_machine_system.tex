@@ -1,0 +1,180 @@
+\doxysection{IMachine\+System Class Reference}
+\hypertarget{class_i_machine_system}{}\label{class_i_machine_system}\index{IMachineSystem@{IMachineSystem}}
+
+
+{\ttfamily \#include $<$IMachine\+System.\+h$>$}
+
+Inheritance diagram for IMachine\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_machine_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_machine_system_a3706a7e77bdd4bd7cf221537d702f0af}\label{class_i_machine_system_a3706a7e77bdd4bd7cf221537d702f0af} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IMachine\+System} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_machine_system_a1630b6c144ed4515e04438c2dccb4e27}{Set\+Location}} (wx\+Point location)=0
+\item 
+virtual wx\+Point \mbox{\hyperlink{class_i_machine_system_ab46bb699af60e1a9a1c810f6591eb66b}{Get\+Location}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_machine_system_a2804c866a6281ff852279b51e4ff4a9b}{Draw\+Machine}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_machine_system_a715970598f43e72566d9388f13e69206}{Set\+Machine\+Frame}} (int frame)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_machine_system_a8100ba09e12fda770d0b424a66da38a5}{Set\+Frame\+Rate}} (double rate)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_machine_system_aec4119fa38a8eb781598cb951b01c029}{Choose\+Machine}} (int machine)=0
+\item 
+virtual int \mbox{\hyperlink{class_i_machine_system_aefc63bfb0d83183fb3bde5bdefc5914e}{Get\+Machine\+Number}} ()=0
+\item 
+virtual double \mbox{\hyperlink{class_i_machine_system_aaec8dd6bd92f45370631207c238c1ec9}{Get\+Machine\+Time}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_machine_system_a88416c64060ac1b994e8e872bdb8ff53}{Set\+Flag}} (int flag)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface that represents a machine.
+
+This uses a standin class to provide a way to develop the adapter class first if you so choose.
+
+You are not allowed to change this class in any way! 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_machine_system_aec4119fa38a8eb781598cb951b01c029}\index{IMachineSystem@{IMachineSystem}!ChooseMachine@{ChooseMachine}}
+\index{ChooseMachine@{ChooseMachine}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{ChooseMachine()}{ChooseMachine()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_aec4119fa38a8eb781598cb951b01c029} 
+virtual void IMachine\+System\+::\+Choose\+Machine (\begin{DoxyParamCaption}\item[{int}]{machine}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the machine number 
+\begin{DoxyParams}{Parameters}
+{\em machine} & An integer number. Each number makes a different machine \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_ab8ace26c73576b6cda21b12753481510}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_ae6c5013b9068e23fe193db40a07c2b1e}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_a2804c866a6281ff852279b51e4ff4a9b}\index{IMachineSystem@{IMachineSystem}!DrawMachine@{DrawMachine}}
+\index{DrawMachine@{DrawMachine}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{DrawMachine()}{DrawMachine()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_a2804c866a6281ff852279b51e4ff4a9b} 
+virtual void IMachine\+System\+::\+Draw\+Machine (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Draw the machine at the currently specified location 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Graphics object to render to \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_a96fe14bfcdb789abace1bc0694d1cfe9}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_a22fac55e7a19120ec19149c312e13fe8}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_ab46bb699af60e1a9a1c810f6591eb66b}\index{IMachineSystem@{IMachineSystem}!GetLocation@{GetLocation}}
+\index{GetLocation@{GetLocation}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{GetLocation()}{GetLocation()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_ab46bb699af60e1a9a1c810f6591eb66b} 
+virtual wx\+Point IMachine\+System\+::\+Get\+Location (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the location of hte machine \begin{DoxyReturn}{Returns}
+Location x,y in pixels as a point 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_abc6e36c5f511c2281b0c0bdeb59849fc}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_acd7532dd117367407eb8240cde10b4b9}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_aefc63bfb0d83183fb3bde5bdefc5914e}\index{IMachineSystem@{IMachineSystem}!GetMachineNumber@{GetMachineNumber}}
+\index{GetMachineNumber@{GetMachineNumber}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{GetMachineNumber()}{GetMachineNumber()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_aefc63bfb0d83183fb3bde5bdefc5914e} 
+virtual int IMachine\+System\+::\+Get\+Machine\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the current machine number \begin{DoxyReturn}{Returns}
+\doxylink{class_machine}{Machine} number integer 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_a23ade6abb8275caa1e33c96be71d98ff}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_aee42aad117a3fb1f2b5b9663141b40e7}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_aaec8dd6bd92f45370631207c238c1ec9}\index{IMachineSystem@{IMachineSystem}!GetMachineTime@{GetMachineTime}}
+\index{GetMachineTime@{GetMachineTime}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{GetMachineTime()}{GetMachineTime()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_aaec8dd6bd92f45370631207c238c1ec9} 
+virtual double IMachine\+System\+::\+Get\+Machine\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the current machine time. \begin{DoxyReturn}{Returns}
+\doxylink{class_machine}{Machine} time in seconds 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_ab9034793ef8955ed1638c32ebf303d83}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_adc16fb107586015ebf592c2cddb421a0}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_a88416c64060ac1b994e8e872bdb8ff53}\index{IMachineSystem@{IMachineSystem}!SetFlag@{SetFlag}}
+\index{SetFlag@{SetFlag}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{SetFlag()}{SetFlag()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_a88416c64060ac1b994e8e872bdb8ff53} 
+virtual void IMachine\+System\+::\+Set\+Flag (\begin{DoxyParamCaption}\item[{int}]{flag}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the flag from the control panel 
+\begin{DoxyParams}{Parameters}
+{\em flag} & Flag to set \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_a6be0185b2940442b289ef8a7b71f9f62}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_acc7f3a48bb518e241f7abd36481e709b}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_a8100ba09e12fda770d0b424a66da38a5}\index{IMachineSystem@{IMachineSystem}!SetFrameRate@{SetFrameRate}}
+\index{SetFrameRate@{SetFrameRate}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{SetFrameRate()}{SetFrameRate()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_a8100ba09e12fda770d0b424a66da38a5} 
+virtual void IMachine\+System\+::\+Set\+Frame\+Rate (\begin{DoxyParamCaption}\item[{double}]{rate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the expected frame rate in frames per second 
+\begin{DoxyParams}{Parameters}
+{\em rate} & Frame rate in frames per second \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_a57114998f114ba3068298e221923afc1}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_afad873f101a266b451e6ccadf0fc2fe7}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_a1630b6c144ed4515e04438c2dccb4e27}\index{IMachineSystem@{IMachineSystem}!SetLocation@{SetLocation}}
+\index{SetLocation@{SetLocation}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{SetLocation()}{SetLocation()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_a1630b6c144ed4515e04438c2dccb4e27} 
+virtual void IMachine\+System\+::\+Set\+Location (\begin{DoxyParamCaption}\item[{wx\+Point}]{location}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the position for the root of the machine 
+\begin{DoxyParams}{Parameters}
+{\em location} & The x,y location to place the machine \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_ade04c5dfef68cfe59adbfa3e92d3edfb}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_aa3e3775201c0ef2da35d4a0cab353cc6}{Machine\+System\+Standin}}.
+
+\Hypertarget{class_i_machine_system_a715970598f43e72566d9388f13e69206}\index{IMachineSystem@{IMachineSystem}!SetMachineFrame@{SetMachineFrame}}
+\index{SetMachineFrame@{SetMachineFrame}!IMachineSystem@{IMachineSystem}}
+\doxysubsubsection{\texorpdfstring{SetMachineFrame()}{SetMachineFrame()}}
+{\footnotesize\ttfamily \label{class_i_machine_system_a715970598f43e72566d9388f13e69206} 
+virtual void IMachine\+System\+::\+Set\+Machine\+Frame (\begin{DoxyParamCaption}\item[{int}]{frame}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the current machine animation frame 
+\begin{DoxyParams}{Parameters}
+{\em frame} & Frame number \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_machine_system_a4463c3517a05a41dff082ba005e5c393}{Machine\+System}}, and \mbox{\hyperlink{class_machine_system_standin_abefb2809dd34208f46b48acabd562fab}{Machine\+System\+Standin}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_i_machine_system_8h}{IMachine\+System.\+h}}\end{DoxyCompactItemize}

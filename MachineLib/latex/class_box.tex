@@ -1,0 +1,148 @@
+\doxysection{Box Class Reference}
+\hypertarget{class_box}{}\label{class_box}\index{Box@{Box}}
+
+
+{\ttfamily \#include $<$Box.\+h$>$}
+
+Inheritance diagram for Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_box}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_box_adb8706c175f03e41541adc2734483bb9}{Box}} (std\+::wstring resources\+Dir)
+\item 
+void \mbox{\hyperlink{class_box_ae2b626dd9a4e69619de23e339ede5bfa}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_box_a33730a8ac042e24f1363feb495f607d9}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_box_a797465f0d9e0e3e5416c6152ce0450f7}{Draw\+Foreground}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y)
+\item 
+void \mbox{\hyperlink{class_box_ae2ea91a5459bbd2f26c2bbb16bde1158}{Advance}} (double time) override
+\item 
+void \mbox{\hyperlink{class_box_a297d9918d92ac480d7dc5c8203c571f9}{Key\+Drop\+Triggered}} () override
+\begin{DoxyCompactList}\small\item\em Abstract fucntion to act on key drops. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_key_drop_listener}{IKey\+Drop\+Listener}}}
+
+
+\doxysubsection{Detailed Description}
+Class for the box 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_box_adb8706c175f03e41541adc2734483bb9}\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{Box()}{Box()}}
+{\footnotesize\ttfamily \label{class_box_adb8706c175f03e41541adc2734483bb9} 
+Box\+::\+Box (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{}\end{DoxyParamCaption})}
+
+Creates a box 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources directory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_box_ae2ea91a5459bbd2f26c2bbb16bde1158}\index{Box@{Box}!Advance@{Advance}}
+\index{Advance@{Advance}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_box_ae2ea91a5459bbd2f26c2bbb16bde1158} 
+void Box\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the box 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_box_a33730a8ac042e24f1363feb495f607d9}\index{Box@{Box}!Draw@{Draw}}
+\index{Draw@{Draw}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_box_a33730a8ac042e24f1363feb495f607d9} 
+void Box\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the box 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphis context object used for drawing \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation of the object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_box_a797465f0d9e0e3e5416c6152ce0450f7}\index{Box@{Box}!DrawForeground@{DrawForeground}}
+\index{DrawForeground@{DrawForeground}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{DrawForeground()}{DrawForeground()}}
+{\footnotesize\ttfamily \label{class_box_a797465f0d9e0e3e5416c6152ce0450f7} 
+void Box\+::\+Draw\+Foreground (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Draw the foreground of the box 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_box_a297d9918d92ac480d7dc5c8203c571f9}\index{Box@{Box}!KeyDropTriggered@{KeyDropTriggered}}
+\index{KeyDropTriggered@{KeyDropTriggered}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{KeyDropTriggered()}{KeyDropTriggered()}}
+{\footnotesize\ttfamily \label{class_box_a297d9918d92ac480d7dc5c8203c571f9} 
+void Box\+::\+Key\+Drop\+Triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Abstract fucntion to act on key drops. 
+
+
+
+Implements \mbox{\hyperlink{class_i_key_drop_listener_a26c9b321107fabc04fce05f200311c77}{IKey\+Drop\+Listener}}.
+
+\Hypertarget{class_box_ae2b626dd9a4e69619de23e339ede5bfa}\index{Box@{Box}!Reset@{Reset}}
+\index{Reset@{Reset}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_box_ae2b626dd9a4e69619de23e339ede5bfa} 
+void Box\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Resets the box 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_box_8h}{Box.\+h}}\item 
+\mbox{\hyperlink{_box_8cpp}{Box.\+cpp}}\end{DoxyCompactItemize}

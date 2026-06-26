@@ -1,0 +1,53 @@
+\doxysection{Component.\+h}
+\hypertarget{_component_8h_source}{}\label{_component_8h_source}\mbox{\hyperlink{_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ COMPONENT\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ COMPONENT\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_machine_8h}{Machine.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_machine}{Machine}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component}{Component}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ wxPoint\ mPosition\ =\ wxPoint(0,\ 0);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \mbox{\hyperlink{class_machine}{Machine}}\ *mMachine\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ std::wstring\ mImagesDir;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \mbox{\hyperlink{class_component}{Component}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \mbox{\hyperlink{class_component}{Component}}(std::wstring\ resourcesDir);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{SetInitialPosition}}(wxPoint\ point)\ \{\};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{SetPosition}}(wxPoint\ position)\ \{\ mPosition\ =\ position;\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ wxPoint\ \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{GetPosition}}()\ \{\ \textcolor{keywordflow}{return}\ mPosition;\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Reset}}()\ =\ 0;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{SetFrame}}(\textcolor{keywordtype}{double}\ frame)\ \{\};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{SetTime}}(\textcolor{keywordtype}{double}\ time)\ \{\};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{SetMachine}}(\mbox{\hyperlink{class_machine}{Machine}}\ *machine)\ \{\ mMachine\ =\ machine;\ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \{\}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ std::wstring\ \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{GetImagesDir}}()\ \{\ \textcolor{keywordflow}{return}\ mImagesDir;\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//COMPONENT\_H}}
+
+\end{DoxyCode}

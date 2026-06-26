@@ -1,0 +1,150 @@
+\doxysection{Music\+Box Class Reference}
+\hypertarget{class_music_box}{}\label{class_music_box}\index{MusicBox@{MusicBox}}
+
+
+{\ttfamily \#include $<$Music\+Box.\+h$>$}
+
+Inheritance diagram for Music\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_music_box}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_music_box_a4edb14279d194262e614321495b8defd}{Music\+Box}} (std\+::wstring Resources\+Dir, std\+::wstring song\+File)
+\item 
+void \mbox{\hyperlink{class_music_box_adf353b031c74f47b0e70e7d91662482f}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_music_box_af93c98b919bd12a5c90e9de95efa353b}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_music_box_aed10aaec1a1069ed26a13e212a8ccd1f}{Update\+Rotation}} (double angle) override
+\item 
+void \mbox{\hyperlink{class_music_box_ad789cdd5b2627dbe37203e4873be2141}{Advance}} (double time) override
+\item 
+void \mbox{\hyperlink{class_music_box_a412a0c20ef034f272bda84829d270508}{Xml\+Load}} ()
+\item 
+void \mbox{\hyperlink{class_music_box_a5bd85ac72b7526ec246a5c9a4d9a58fb}{Play\+Sound}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_rotation_sink}{IRotation\+Sink}}}
+
+
+\doxysubsection{Detailed Description}
+Class for the Music \doxylink{class_box}{Box} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_music_box_a4edb14279d194262e614321495b8defd}\index{MusicBox@{MusicBox}!MusicBox@{MusicBox}}
+\index{MusicBox@{MusicBox}!MusicBox@{MusicBox}}
+\doxysubsubsection{\texorpdfstring{MusicBox()}{MusicBox()}}
+{\footnotesize\ttfamily \label{class_music_box_a4edb14279d194262e614321495b8defd} 
+Music\+Box\+::\+Music\+Box (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{, }\item[{std\+::wstring}]{song\+File}{}\end{DoxyParamCaption})}
+
+Create the music box component 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources directory \\
+\hline
+{\em song\+File} & song file used to load songs \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_music_box_ad789cdd5b2627dbe37203e4873be2141}\index{MusicBox@{MusicBox}!Advance@{Advance}}
+\index{Advance@{Advance}!MusicBox@{MusicBox}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_music_box_ad789cdd5b2627dbe37203e4873be2141} 
+void Music\+Box\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the music box 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_music_box_adf353b031c74f47b0e70e7d91662482f}\index{MusicBox@{MusicBox}!Draw@{Draw}}
+\index{Draw@{Draw}!MusicBox@{MusicBox}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_music_box_adf353b031c74f47b0e70e7d91662482f} 
+void Music\+Box\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the music box 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing the music box \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation of the object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_music_box_a5bd85ac72b7526ec246a5c9a4d9a58fb}\index{MusicBox@{MusicBox}!PlaySound@{PlaySound}}
+\index{PlaySound@{PlaySound}!MusicBox@{MusicBox}}
+\doxysubsubsection{\texorpdfstring{PlaySound()}{PlaySound()}}
+{\footnotesize\ttfamily \label{class_music_box_a5bd85ac72b7526ec246a5c9a4d9a58fb} 
+void Music\+Box\+::\+Play\+Sound (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Play the music \Hypertarget{class_music_box_af93c98b919bd12a5c90e9de95efa353b}\index{MusicBox@{MusicBox}!Reset@{Reset}}
+\index{Reset@{Reset}!MusicBox@{MusicBox}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_music_box_af93c98b919bd12a5c90e9de95efa353b} 
+void Music\+Box\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset the music box 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+\Hypertarget{class_music_box_aed10aaec1a1069ed26a13e212a8ccd1f}\index{MusicBox@{MusicBox}!UpdateRotation@{UpdateRotation}}
+\index{UpdateRotation@{UpdateRotation}!MusicBox@{MusicBox}}
+\doxysubsubsection{\texorpdfstring{UpdateRotation()}{UpdateRotation()}}
+{\footnotesize\ttfamily \label{class_music_box_aed10aaec1a1069ed26a13e212a8ccd1f} 
+void Music\+Box\+::\+Update\+Rotation (\begin{DoxyParamCaption}\item[{double}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the rotation of the music box 
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle to be set to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_rotation_sink_a988fc6d56068045851c9c430d1d02fc0}{IRotation\+Sink}}.
+
+\Hypertarget{class_music_box_a412a0c20ef034f272bda84829d270508}\index{MusicBox@{MusicBox}!XmlLoad@{XmlLoad}}
+\index{XmlLoad@{XmlLoad}!MusicBox@{MusicBox}}
+\doxysubsubsection{\texorpdfstring{XmlLoad()}{XmlLoad()}}
+{\footnotesize\ttfamily \label{class_music_box_a412a0c20ef034f272bda84829d270508} 
+void Music\+Box\+::\+Xml\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Load the songs, beats and notes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_music_box_8h}{Music\+Box.\+h}}\item 
+\mbox{\hyperlink{_music_box_8cpp}{Music\+Box.\+cpp}}\end{DoxyCompactItemize}

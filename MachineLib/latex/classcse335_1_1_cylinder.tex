@@ -1,0 +1,136 @@
+\doxysection{cse335\+::Cylinder Class Reference}
+\hypertarget{classcse335_1_1_cylinder}{}\label{classcse335_1_1_cylinder}\index{cse335::Cylinder@{cse335::Cylinder}}
+
+
+{\ttfamily \#include $<$Cylinder.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcse335_1_1_cylinder_abae69c9b5bf14f4925e747bdb0216f32}{Cylinder}} ()=default
+\item 
+\Hypertarget{classcse335_1_1_cylinder_ae5756345d4a5e1e40eb4af11a8c1222b}\label{classcse335_1_1_cylinder_ae5756345d4a5e1e40eb4af11a8c1222b} 
+{\bfseries Cylinder} (const \mbox{\hyperlink{classcse335_1_1_cylinder}{Cylinder}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor (disabled) \end{DoxyCompactList}\item 
+\Hypertarget{classcse335_1_1_cylinder_adaee41ede7365e9dbc10b93126af2f57}\label{classcse335_1_1_cylinder_adaee41ede7365e9dbc10b93126af2f57} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classcse335_1_1_cylinder}{Cylinder}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcse335_1_1_cylinder_aee68581f3820991e74e150212dfc8ef1}{Set\+Size}} (int diameter, int length)
+\item 
+void \mbox{\hyperlink{classcse335_1_1_cylinder_a0c5b821a76751be07cbae47e841d02e8}{Set\+Colour}} (const wx\+Colour \&color)
+\item 
+void \mbox{\hyperlink{classcse335_1_1_cylinder_aa8ad3672cc7d3b23c4937be8c436f620}{Set\+Border\+Color}} (const wx\+Colour \&color)
+\item 
+void \mbox{\hyperlink{classcse335_1_1_cylinder_a03f11d20382c35a07bb8f99dca795c7f}{Set\+Lines}} (const wx\+Colour \&color, int width, int num)
+\item 
+void \mbox{\hyperlink{classcse335_1_1_cylinder_a380ee2556c1ba920d75f02075b1f6425}{Set\+Offset}} (double offset)
+\item 
+void \mbox{\hyperlink{classcse335_1_1_cylinder_a2047a5bd2d3f2ef9349092484e5b759b}{Draw}} (const std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ \&graphics, double x, double y, double rotation)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple rod class that is used by the shaft and anything else that needs a rod that expresses rotation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcse335_1_1_cylinder_abae69c9b5bf14f4925e747bdb0216f32}\index{cse335::Cylinder@{cse335::Cylinder}!Cylinder@{Cylinder}}
+\index{Cylinder@{Cylinder}!cse335::Cylinder@{cse335::Cylinder}}
+\doxysubsubsection{\texorpdfstring{Cylinder()}{Cylinder()}}
+{\footnotesize\ttfamily \label{classcse335_1_1_cylinder_abae69c9b5bf14f4925e747bdb0216f32} 
+cse335\+::\+Cylinder\+::\+Cylinder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Constructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcse335_1_1_cylinder_a2047a5bd2d3f2ef9349092484e5b759b}\index{cse335::Cylinder@{cse335::Cylinder}!Draw@{Draw}}
+\index{Draw@{Draw}!cse335::Cylinder@{cse335::Cylinder}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{classcse335_1_1_cylinder_a2047a5bd2d3f2ef9349092484e5b759b} 
+void cse335\+::\+Cylinder\+::\+Draw (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ \&}]{graphics}{, }\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{double}]{rotation}{}\end{DoxyParamCaption})}
+
+Draw the cylinder
+
+The X coordinate is the left side of the cylinder. The Y coordinate is the center of the cylinder horizontally.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Graphics device to draw on \\
+\hline
+{\em x} & X location of left center end of cylinder \\
+\hline
+{\em y} & Y location of left center end of cylinder \\
+\hline
+{\em rotation} & Current rotation angle in turns \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcse335_1_1_cylinder_aa8ad3672cc7d3b23c4937be8c436f620}\index{cse335::Cylinder@{cse335::Cylinder}!SetBorderColor@{SetBorderColor}}
+\index{SetBorderColor@{SetBorderColor}!cse335::Cylinder@{cse335::Cylinder}}
+\doxysubsubsection{\texorpdfstring{SetBorderColor()}{SetBorderColor()}}
+{\footnotesize\ttfamily \label{classcse335_1_1_cylinder_aa8ad3672cc7d3b23c4937be8c436f620} 
+void cse335\+::\+Cylinder\+::\+Set\+Border\+Color (\begin{DoxyParamCaption}\item[{const wx\+Colour \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the border color drawn around the cylinder 
+\begin{DoxyParams}{Parameters}
+{\em color} & Color to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcse335_1_1_cylinder_a0c5b821a76751be07cbae47e841d02e8}\index{cse335::Cylinder@{cse335::Cylinder}!SetColour@{SetColour}}
+\index{SetColour@{SetColour}!cse335::Cylinder@{cse335::Cylinder}}
+\doxysubsubsection{\texorpdfstring{SetColour()}{SetColour()}}
+{\footnotesize\ttfamily \label{classcse335_1_1_cylinder_a0c5b821a76751be07cbae47e841d02e8} 
+void cse335\+::\+Cylinder\+::\+Set\+Colour (\begin{DoxyParamCaption}\item[{const wx\+Colour \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the cylinder color 
+\begin{DoxyParams}{Parameters}
+{\em color} & Color to draw the cylinder \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcse335_1_1_cylinder_a03f11d20382c35a07bb8f99dca795c7f}\index{cse335::Cylinder@{cse335::Cylinder}!SetLines@{SetLines}}
+\index{SetLines@{SetLines}!cse335::Cylinder@{cse335::Cylinder}}
+\doxysubsubsection{\texorpdfstring{SetLines()}{SetLines()}}
+{\footnotesize\ttfamily \label{classcse335_1_1_cylinder_a03f11d20382c35a07bb8f99dca795c7f} 
+void cse335\+::\+Cylinder\+::\+Set\+Lines (\begin{DoxyParamCaption}\item[{const wx\+Colour \&}]{color}{, }\item[{int}]{width}{, }\item[{int}]{num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set lines that appear on the cylinder that show it is turning 
+\begin{DoxyParams}{Parameters}
+{\em color} & Color of the lines \\
+\hline
+{\em width} & How wide to draw the lines \\
+\hline
+{\em num} & Number of lines to draw \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcse335_1_1_cylinder_a380ee2556c1ba920d75f02075b1f6425}\index{cse335::Cylinder@{cse335::Cylinder}!SetOffset@{SetOffset}}
+\index{SetOffset@{SetOffset}!cse335::Cylinder@{cse335::Cylinder}}
+\doxysubsubsection{\texorpdfstring{SetOffset()}{SetOffset()}}
+{\footnotesize\ttfamily \label{classcse335_1_1_cylinder_a380ee2556c1ba920d75f02075b1f6425} 
+void cse335\+::\+Cylinder\+::\+Set\+Offset (\begin{DoxyParamCaption}\item[{double}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Optional offset added to the rotation of the lines.
+
+This is provided so you can avoid them all looking the exact same with the lines at the same angle. This makes it look a bit more realistic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcse335_1_1_cylinder_aee68581f3820991e74e150212dfc8ef1}\index{cse335::Cylinder@{cse335::Cylinder}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!cse335::Cylinder@{cse335::Cylinder}}
+\doxysubsubsection{\texorpdfstring{SetSize()}{SetSize()}}
+{\footnotesize\ttfamily \label{classcse335_1_1_cylinder_aee68581f3820991e74e150212dfc8ef1} 
+void cse335\+::\+Cylinder\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{int}]{diameter}{, }\item[{int}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the cylinder size 
+\begin{DoxyParams}{Parameters}
+{\em diameter} & \doxylink{classcse335_1_1_cylinder}{Cylinder} diameter in pixels \\
+\hline
+{\em length} & \doxylink{classcse335_1_1_cylinder}{Cylinder} length in pixels \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cylinder_8h}{Cylinder.\+h}}\item 
+\mbox{\hyperlink{_cylinder_8cpp}{Cylinder.\+cpp}}\end{DoxyCompactItemize}

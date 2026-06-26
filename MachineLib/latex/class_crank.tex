@@ -1,0 +1,220 @@
+\doxysection{Crank Class Reference}
+\hypertarget{class_crank}{}\label{class_crank}\index{Crank@{Crank}}
+
+
+{\ttfamily \#include $<$Crank.\+h$>$}
+
+Inheritance diagram for Crank\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_crank}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_crank_ad41e7972c09d2c55db6e5ead1a37ad41}{Crank}} (std\+::wstring resources\+Dir)
+\item 
+void \mbox{\hyperlink{class_crank_a9647bdcbb805b4dc6a91feb3d2258a21}{Setup\+Handle}} ()
+\item 
+void \mbox{\hyperlink{class_crank_aa7b49d2b57d474b64d342c66ccc6a79c}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_crank_af364350f296b01ca5e23135f278d0d58}{Draw\+Crank}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_crank_ae3c8010e923a065849d8b20d6ad847f7}{Draw\+Handle}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_crank_a07823ff7d5151c58db3e7783194a847c}{Set\+Rotation\+Speed}} (double speed)
+\item 
+void \mbox{\hyperlink{class_crank_a9c1aba5afaa23e4a2f8176456800503d}{Rotate}} (double time)
+\item 
+void \mbox{\hyperlink{class_crank_a0fe064101c8149939643388970c35deb}{Toggle\+Rotation}} ()
+\item 
+wx\+Point \mbox{\hyperlink{class_crank_a5071beae6c6dab731165d447f99390d8}{Calculate\+Crank\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_crank_a97d6a8cf42677596d8310b9c088c0cc1}{Update\+Handle\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_crank_a986fd1b2a14a8566f923c41273e9f5d4}{Update\+Rotation}} (double angle)
+\item 
+void \mbox{\hyperlink{class_crank_a437d87584ec61a1687181dd001fd97ea}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_crank_abcef2b36e7ad7580f76681eafd02a010}{Advance}} (double time) override
+\item 
+\mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_crank_a6f73a21dee361a6bc04994843ea7fd42}{Get\+Source}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for \doxylink{class_crank}{Crank} object 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_crank_ad41e7972c09d2c55db6e5ead1a37ad41}\index{Crank@{Crank}!Crank@{Crank}}
+\index{Crank@{Crank}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{Crank()}{Crank()}}
+{\footnotesize\ttfamily \label{class_crank_ad41e7972c09d2c55db6e5ead1a37ad41} 
+Crank\+::\+Crank (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{}\end{DoxyParamCaption})}
+
+Create the crank object 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources directory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_crank_abcef2b36e7ad7580f76681eafd02a010}\index{Crank@{Crank}!Advance@{Advance}}
+\index{Advance@{Advance}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_crank_abcef2b36e7ad7580f76681eafd02a010} 
+void Crank\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the crank 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_crank_a5071beae6c6dab731165d447f99390d8}\index{Crank@{Crank}!CalculateCrankPosition@{CalculateCrankPosition}}
+\index{CalculateCrankPosition@{CalculateCrankPosition}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{CalculateCrankPosition()}{CalculateCrankPosition()}}
+{\footnotesize\ttfamily \label{class_crank_a5071beae6c6dab731165d447f99390d8} 
+wx\+Point Crank\+::\+Calculate\+Crank\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculate the position of the crank \begin{DoxyReturn}{Returns}
+position of the crank 
+\end{DoxyReturn}
+\Hypertarget{class_crank_aa7b49d2b57d474b64d342c66ccc6a79c}\index{Crank@{Crank}!Draw@{Draw}}
+\index{Draw@{Draw}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_crank_aa7b49d2b57d474b64d342c66ccc6a79c} 
+void Crank\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Abstract function to draw the component \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation of this object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_crank_af364350f296b01ca5e23135f278d0d58}\index{Crank@{Crank}!DrawCrank@{DrawCrank}}
+\index{DrawCrank@{DrawCrank}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{DrawCrank()}{DrawCrank()}}
+{\footnotesize\ttfamily \label{class_crank_af364350f296b01ca5e23135f278d0d58} 
+void Crank\+::\+Draw\+Crank (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+Draw the crank 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object for drawing \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_crank_ae3c8010e923a065849d8b20d6ad847f7}\index{Crank@{Crank}!DrawHandle@{DrawHandle}}
+\index{DrawHandle@{DrawHandle}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{DrawHandle()}{DrawHandle()}}
+{\footnotesize\ttfamily \label{class_crank_ae3c8010e923a065849d8b20d6ad847f7} 
+void Crank\+::\+Draw\+Handle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+Draw the handle of the crank 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object for drawing \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_crank_a6f73a21dee361a6bc04994843ea7fd42}\index{Crank@{Crank}!GetSource@{GetSource}}
+\index{GetSource@{GetSource}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{GetSource()}{GetSource()}}
+{\footnotesize\ttfamily \label{class_crank_a6f73a21dee361a6bc04994843ea7fd42} 
+\mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \texorpdfstring{$\ast$}{*} Crank\+::\+Get\+Source (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a rotation source of the crank \begin{DoxyReturn}{Returns}
+rotation source of the crank 
+\end{DoxyReturn}
+\Hypertarget{class_crank_a437d87584ec61a1687181dd001fd97ea}\index{Crank@{Crank}!Reset@{Reset}}
+\index{Reset@{Reset}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_crank_a437d87584ec61a1687181dd001fd97ea} 
+void Crank\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset the crank 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+\Hypertarget{class_crank_a9c1aba5afaa23e4a2f8176456800503d}\index{Crank@{Crank}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily \label{class_crank_a9c1aba5afaa23e4a2f8176456800503d} 
+void Crank\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})}
+
+Rotate the crank 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_crank_a07823ff7d5151c58db3e7783194a847c}\index{Crank@{Crank}!SetRotationSpeed@{SetRotationSpeed}}
+\index{SetRotationSpeed@{SetRotationSpeed}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{SetRotationSpeed()}{SetRotationSpeed()}}
+{\footnotesize\ttfamily \label{class_crank_a07823ff7d5151c58db3e7783194a847c} 
+void Crank\+::\+Set\+Rotation\+Speed (\begin{DoxyParamCaption}\item[{double}]{speed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the rotation speed of the crank 
+\begin{DoxyParams}{Parameters}
+{\em speed} & speed to set the rotation speed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_crank_a9647bdcbb805b4dc6a91feb3d2258a21}\index{Crank@{Crank}!SetupHandle@{SetupHandle}}
+\index{SetupHandle@{SetupHandle}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{SetupHandle()}{SetupHandle()}}
+{\footnotesize\ttfamily \label{class_crank_a9647bdcbb805b4dc6a91feb3d2258a21} 
+void Crank\+::\+Setup\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Set up the handle of the crank \Hypertarget{class_crank_a0fe064101c8149939643388970c35deb}\index{Crank@{Crank}!ToggleRotation@{ToggleRotation}}
+\index{ToggleRotation@{ToggleRotation}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{ToggleRotation()}{ToggleRotation()}}
+{\footnotesize\ttfamily \label{class_crank_a0fe064101c8149939643388970c35deb} 
+void Crank\+::\+Toggle\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Toggle the rotating status of the crank \Hypertarget{class_crank_a97d6a8cf42677596d8310b9c088c0cc1}\index{Crank@{Crank}!UpdateHandlePosition@{UpdateHandlePosition}}
+\index{UpdateHandlePosition@{UpdateHandlePosition}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{UpdateHandlePosition()}{UpdateHandlePosition()}}
+{\footnotesize\ttfamily \label{class_crank_a97d6a8cf42677596d8310b9c088c0cc1} 
+void Crank\+::\+Update\+Handle\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Update the handle position \Hypertarget{class_crank_a986fd1b2a14a8566f923c41273e9f5d4}\index{Crank@{Crank}!UpdateRotation@{UpdateRotation}}
+\index{UpdateRotation@{UpdateRotation}!Crank@{Crank}}
+\doxysubsubsection{\texorpdfstring{UpdateRotation()}{UpdateRotation()}}
+{\footnotesize\ttfamily \label{class_crank_a986fd1b2a14a8566f923c41273e9f5d4} 
+void Crank\+::\+Update\+Rotation (\begin{DoxyParamCaption}\item[{double}]{angle}{}\end{DoxyParamCaption})}
+
+Update the rotation of the crank 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_crank_8h}{Crank.\+h}}\item 
+\mbox{\hyperlink{_crank_8cpp}{Crank.\+cpp}}\end{DoxyCompactItemize}

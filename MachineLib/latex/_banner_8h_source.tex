@@ -1,0 +1,37 @@
+\doxysection{Banner.\+h}
+\hypertarget{_banner_8h_source}{}\label{_banner_8h_source}\mbox{\hyperlink{_banner_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ BANNER\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BANNER\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_polygon_8h}{Polygon.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_banner}{Banner}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \textcolor{keywordtype}{double}\ mScale\ =\ 0.0;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mRoll;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mBanner;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \mbox{\hyperlink{class_banner_ad8ea2ca676b75ba2463ba03a3f458c6a}{Banner}}(std::wstring\ resourcesDir);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banner_ae450f11e323861794c0c5a59f6d943a2}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banner_a4f6a6733ba0a1e479aa053e6eac58520}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banner_a43b9efacd3ddcbfeb49eff328e6bc469}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BANNER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,52 @@
+\doxysection{Box.\+h}
+\hypertarget{_box_8h_source}{}\label{_box_8h_source}\mbox{\hyperlink{_box_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ BOX\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BOX\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_polygon_8h}{Polygon.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_key_drop_listener_8h}{IKeyDropListener.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_box}{Box}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_key_drop_listener}{IKeyDropListener}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mBox;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mLid;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mForeground;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \textcolor{keywordtype}{bool}\ mOpen\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \textcolor{keywordtype}{double}\ mLidScale;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \textcolor{keywordtype}{double}\ mAngle\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \mbox{\hyperlink{class_box}{Box}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \mbox{\hyperlink{class_box}{Box}}(std::wstring\ resourcesDir);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_ae2b626dd9a4e69619de23e339ede5bfa}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_a33730a8ac042e24f1363feb495f607d9}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_a797465f0d9e0e3e5416c6152ce0450f7}{DrawForeground}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_ae2ea91a5459bbd2f26c2bbb16bde1158}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_a297d9918d92ac480d7dc5c8203c571f9}{KeyDropTriggered}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOX\_H}}
+
+\end{DoxyCode}

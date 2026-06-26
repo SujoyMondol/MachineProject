@@ -1,0 +1,62 @@
+\doxysection{Cylinder.\+h}
+\hypertarget{_cylinder_8h_source}{}\label{_cylinder_8h_source}\mbox{\hyperlink{_cylinder_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_CYLINDER\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_CYLINDER\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }cse335}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcse335_1_1_cylinder}{Cylinder}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ mDiameter\ =\ 0;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ mLength\ =\ 0;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ wxColour\ mColor\ =\ *wxWHITE;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ wxColour\ mBorderColor\ =\ *wxBLACK;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ wxColour\ mLineColor\ =\ *wxBLACK;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ mLineWidth\ =\ 1;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ mNumLines\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ mOffset\ =\ 0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classcse335_1_1_cylinder_abae69c9b5bf14f4925e747bdb0216f32}{Cylinder}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classcse335_1_1_cylinder_ae5756345d4a5e1e40eb4af11a8c1222b}{Cylinder}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcse335_1_1_cylinder}{Cylinder}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_cylinder_adaee41ede7365e9dbc10b93126af2f57}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcse335_1_1_cylinder}{Cylinder}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_cylinder_aee68581f3820991e74e150212dfc8ef1}{SetSize}}(\textcolor{keywordtype}{int}\ diameter,\ \textcolor{keywordtype}{int}\ length)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ mDiameter\ =\ diameter;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ mLength\ =\ length;}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_cylinder_a0c5b821a76751be07cbae47e841d02e8}{SetColour}}(\textcolor{keyword}{const}\ wxColour\ \&color)\ \{\ mColor\ =\ color;\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_cylinder_aa8ad3672cc7d3b23c4937be8c436f620}{SetBorderColor}}(\textcolor{keyword}{const}\ wxColour\ \&color)\ \{mBorderColor\ =\ color;\}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_cylinder_a03f11d20382c35a07bb8f99dca795c7f}{SetLines}}(\textcolor{keyword}{const}\ wxColour\ \&color,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ num)}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ mLineColor\ =\ color;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ mLineWidth\ =\ width;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ mNumLines\ =\ num;}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_cylinder_a380ee2556c1ba920d75f02075b1f6425}{SetOffset}}(\textcolor{keywordtype}{double}\ offset)\ \{mOffset\ =\ offset;\}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_cylinder_a2047a5bd2d3f2ef9349092484e5b759b}{Draw}}(\textcolor{keyword}{const}\ std::shared\_ptr<wxGraphicsContext>\ \&graphics,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ rotation);}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\_CYLINDER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,148 @@
+\doxysection{Machine Class Reference}
+\hypertarget{class_machine}{}\label{class_machine}\index{Machine@{Machine}}
+
+
+{\ttfamily \#include $<$Machine.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_machine_a8838e6235c8c8d9e9680330ddf507b9e}{Update}} (double elapsed)
+\begin{DoxyCompactList}\small\item\em system owning the machine \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_machine_a1523f69ef43bc068588b10a3fb7ba577}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_machine_a86601e598ced7fa9aed24fecd8110e16}{Reset}} ()
+\item 
+void \mbox{\hyperlink{class_machine_a12a818ae98167e97f595bc37fbd2eeb5}{Add\+Component}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_component}{Component}} $>$ component)
+\item 
+void \mbox{\hyperlink{class_machine_a687efc882c93d811267f4d73201ef3be}{Add\+Box}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_box}{Box}} $>$ box)
+\item 
+void \mbox{\hyperlink{class_machine_a62e3f4b5167ff6b7e4eedf7ee84ede89}{Set\+Machine\+Number}} (int machine\+Number)
+\item 
+int \mbox{\hyperlink{class_machine_a9dba9af1a5919a8092506c8147cfe6d1}{Get\+Machine\+Number}} ()
+\item 
+void \mbox{\hyperlink{class_machine_ab3a7c6695de3bf469fb0479c96138456}{Set\+System}} (\mbox{\hyperlink{class_machine_system}{Machine\+System}} \texorpdfstring{$\ast$}{*}system)
+\item 
+void \mbox{\hyperlink{class_machine_ae92b5515c57d17a67c5f800cf1d1fb8e}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_machine_ad1aa489c386cb45d4b8049e783c99d62}{Set\+Position}} (wx\+Point position)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for machine 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_machine_a687efc882c93d811267f4d73201ef3be}\index{Machine@{Machine}!AddBox@{AddBox}}
+\index{AddBox@{AddBox}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{AddBox()}{AddBox()}}
+{\footnotesize\ttfamily \label{class_machine_a687efc882c93d811267f4d73201ef3be} 
+void Machine\+::\+Add\+Box (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_box}{Box}} $>$}]{box}{}\end{DoxyParamCaption})}
+
+Add box to the machine 
+\begin{DoxyParams}{Parameters}
+{\em box} & box to be added to machine \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_a12a818ae98167e97f595bc37fbd2eeb5}\index{Machine@{Machine}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily \label{class_machine_a12a818ae98167e97f595bc37fbd2eeb5} 
+void Machine\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_component}{Component}} $>$}]{component}{}\end{DoxyParamCaption})}
+
+Add a component to the machine 
+\begin{DoxyParams}{Parameters}
+{\em component} & component to be added \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_a1523f69ef43bc068588b10a3fb7ba577}\index{Machine@{Machine}!Draw@{Draw}}
+\index{Draw@{Draw}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_machine_a1523f69ef43bc068588b10a3fb7ba577} 
+void Machine\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+Draw the machine 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_a9dba9af1a5919a8092506c8147cfe6d1}\index{Machine@{Machine}!GetMachineNumber@{GetMachineNumber}}
+\index{GetMachineNumber@{GetMachineNumber}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{GetMachineNumber()}{GetMachineNumber()}}
+{\footnotesize\ttfamily \label{class_machine_a9dba9af1a5919a8092506c8147cfe6d1} 
+int Machine\+::\+Get\+Machine\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the machine number for this machine \begin{DoxyReturn}{Returns}
+machine number of the machine 
+\end{DoxyReturn}
+\Hypertarget{class_machine_a86601e598ced7fa9aed24fecd8110e16}\index{Machine@{Machine}!Reset@{Reset}}
+\index{Reset@{Reset}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_machine_a86601e598ced7fa9aed24fecd8110e16} 
+void Machine\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Reset the machine \Hypertarget{class_machine_a62e3f4b5167ff6b7e4eedf7ee84ede89}\index{Machine@{Machine}!SetMachineNumber@{SetMachineNumber}}
+\index{SetMachineNumber@{SetMachineNumber}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{SetMachineNumber()}{SetMachineNumber()}}
+{\footnotesize\ttfamily \label{class_machine_a62e3f4b5167ff6b7e4eedf7ee84ede89} 
+void Machine\+::\+Set\+Machine\+Number (\begin{DoxyParamCaption}\item[{int}]{machine\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the machine number of the machine 
+\begin{DoxyParams}{Parameters}
+{\em machine\+Number} & machine number to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_ad1aa489c386cb45d4b8049e783c99d62}\index{Machine@{Machine}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily \label{class_machine_ad1aa489c386cb45d4b8049e783c99d62} 
+void Machine\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{wx\+Point}]{position}{}\end{DoxyParamCaption})}
+
+Set the position of the machine 
+\begin{DoxyParams}{Parameters}
+{\em position} & position to translate the components \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_ab3a7c6695de3bf469fb0479c96138456}\index{Machine@{Machine}!SetSystem@{SetSystem}}
+\index{SetSystem@{SetSystem}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{SetSystem()}{SetSystem()}}
+{\footnotesize\ttfamily \label{class_machine_ab3a7c6695de3bf469fb0479c96138456} 
+void Machine\+::\+Set\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_machine_system}{Machine\+System}} \texorpdfstring{$\ast$}{*}}]{system}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the system 
+\begin{DoxyParams}{Parameters}
+{\em system} & System to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_ae92b5515c57d17a67c5f800cf1d1fb8e}\index{Machine@{Machine}!SetTime@{SetTime}}
+\index{SetTime@{SetTime}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{SetTime()}{SetTime()}}
+{\footnotesize\ttfamily \label{class_machine_ae92b5515c57d17a67c5f800cf1d1fb8e} 
+void Machine\+::\+Set\+Time (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the time for the machine 
+\begin{DoxyParams}{Parameters}
+{\em time} & time to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_a8838e6235c8c8d9e9680330ddf507b9e}\index{Machine@{Machine}!Update@{Update}}
+\index{Update@{Update}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_machine_a8838e6235c8c8d9e9680330ddf507b9e} 
+void Machine\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})}
+
+
+
+system owning the machine 
+
+Update the machine 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_machine_8h}{Machine.\+h}}\item 
+\mbox{\hyperlink{_machine_8cpp}{Machine.\+cpp}}\end{DoxyCompactItemize}

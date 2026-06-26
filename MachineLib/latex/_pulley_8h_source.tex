@@ -1,0 +1,67 @@
+\doxysection{Pulley.\+h}
+\hypertarget{_pulley_8h_source}{}\label{_pulley_8h_source}\mbox{\hyperlink{_pulley_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ PULLEY\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ PULLEY\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_rotation_sink_8h}{IRotationSink.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cylinder_8h}{Cylinder.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rotation_source_8h}{RotationSource.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_shaft_8h}{Shaft.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pulley}{Pulley}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_rotation_sink}{IRotationSink}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \mbox{\hyperlink{classcse335_1_1_cylinder}{cse335::Cylinder}}\ mCylinder;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \mbox{\hyperlink{class_rotation_source}{RotationSource}}\ mSource;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \textcolor{keywordtype}{double}\ mRotationAngle;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ std::shared\_ptr<Pulley>\ mDriven\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \textcolor{keywordtype}{int}\ mDiameter;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \textcolor{keywordtype}{bool}\ mStripe\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \ \textcolor{keywordtype}{double}\ mStripeOffset1\ =\ 0;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \textcolor{keywordtype}{double}\ mStripeOffset2\ =\ 0;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \textcolor{keywordtype}{double}\ mOffsetFactor\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \mbox{\hyperlink{class_pulley_a78a6b822afd0e5486c8ba4a4a67660ff}{Pulley}}(std::wstring\ resourcesDir,\ \textcolor{keywordtype}{int}\ diameter);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pulley_a0e7e667e6923986666c91773ed546d67}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pulley_a8509d1a7a72405e505847b2245bc9594}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pulley_a50457dab3f78b732818e0951d3e91a96}{UpdateRotation}}(\textcolor{keywordtype}{double}\ angle)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pulley_a37078f29bb75d896879558d43d13f882}{SetDriven}}(std::shared\_ptr<Pulley>\ pulley)\ \{\ mDriven\ =\ pulley;\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pulley_a9b28895419c2dc8ffbc37052761c48a5}{GetDiameter}}()\ \{\ \textcolor{keywordflow}{return}\ mDiameter;\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \mbox{\hyperlink{class_rotation_source}{RotationSource}}*\ \mbox{\hyperlink{class_pulley_afb94b2364f7084138ecde1cbc2847d73}{GetSource}}()\ \{\ \textcolor{keywordflow}{return}\ \&mSource;\ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pulley_a96b877713f9571aad63a976f1d03c776}{SetStripe}}()\ \{\ mStripe\ =\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pulley_a5a7cc9baacaff75051654670d312b7f0}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pulley_a9366438ff788aa5cd0aeb1c49c561b64}{SetOffsetFactor}}(\textcolor{keywordtype}{double}\ factor)\ \{\ mOffsetFactor\ =\ factor;\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PULLEY\_H}}
+
+\end{DoxyCode}

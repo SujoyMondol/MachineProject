@@ -1,0 +1,48 @@
+\doxysection{Music\+Box.\+cpp File Reference}
+\hypertarget{_music_box_8cpp}{}\label{_music_box_8cpp}\index{MusicBox.cpp@{MusicBox.cpp}}
+{\ttfamily \#include "{}pch.\+h"{}}\newline
+{\ttfamily \#include "{}Music\+Box.\+h"{}}\newline
+{\ttfamily \#include $<$wx/sound.\+h$>$}\newline
+{\ttfamily \#include $<$wx/xml/xml.\+h$>$}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_music_box_8cpp_adb57879bc8826e401dfa2d982c1390fc}\label{_music_box_8cpp_adb57879bc8826e401dfa2d982c1390fc} 
+const std\+::wstring {\bfseries Music\+Box\+Image} = L"{}/images/mechanism.\+png"{}
+\begin{DoxyCompactList}\small\item\em The music box mechanism image filename. \end{DoxyCompactList}\item 
+\Hypertarget{_music_box_8cpp_a72242da6a713857b966f65a0b07fb227}\label{_music_box_8cpp_a72242da6a713857b966f65a0b07fb227} 
+const int {\bfseries Music\+Box\+Image\+Size} = 120
+\begin{DoxyCompactList}\small\item\em Size to draw the music box mechanism image in pixels. \end{DoxyCompactList}\item 
+\Hypertarget{_music_box_8cpp_a76e995a80bbd8cb63c73f86fabe177d3}\label{_music_box_8cpp_a76e995a80bbd8cb63c73f86fabe177d3} 
+const wx\+Colour {\bfseries Music\+Box\+Drum\+Color} = wx\+Colour(248, 242, 191)
+\begin{DoxyCompactList}\small\item\em The color of the rotating music box drum. \end{DoxyCompactList}\item 
+\Hypertarget{_music_box_8cpp_aa9b94b2f1d5fed7cc508a52dcff21a6b}\label{_music_box_8cpp_aa9b94b2f1d5fed7cc508a52dcff21a6b} 
+const wx\+Colour {\bfseries Music\+Box\+Drum\+Line\+Color} = wx\+Colour(20, 20, 20)
+\begin{DoxyCompactList}\small\item\em The color of the lines on the music box rotating drum. \end{DoxyCompactList}\item 
+\Hypertarget{_music_box_8cpp_a13f311f1c75a40413d258ce3a0d6146c}\label{_music_box_8cpp_a13f311f1c75a40413d258ce3a0d6146c} 
+const int {\bfseries Music\+Box\+Drum\+Width} = 40
+\begin{DoxyCompactList}\small\item\em The music box drum width. \end{DoxyCompactList}\item 
+\Hypertarget{_music_box_8cpp_ab46363efbdb8e5207ff86b1f11b05959}\label{_music_box_8cpp_ab46363efbdb8e5207ff86b1f11b05959} 
+const int {\bfseries Music\+Box\+Drum\+Diameter} = 33
+\begin{DoxyCompactList}\small\item\em The music box drum diameter. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_music_box_8cpp_add2db32ff0cbb373ce879935f45ed6e4}{Beats\+Per\+Rotation}} = 12
+\item 
+\Hypertarget{_music_box_8cpp_a76df10e40ef25a6b8f7f014eed6e6084}\label{_music_box_8cpp_a76df10e40ef25a6b8f7f014eed6e6084} 
+const std\+::wstring {\bfseries Audio\+Directory} = L"{}/audio/"{}
+\begin{DoxyCompactList}\small\item\em The audio directory in the resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+sujoy 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_music_box_8cpp_add2db32ff0cbb373ce879935f45ed6e4}\index{MusicBox.cpp@{MusicBox.cpp}!BeatsPerRotation@{BeatsPerRotation}}
+\index{BeatsPerRotation@{BeatsPerRotation}!MusicBox.cpp@{MusicBox.cpp}}
+\doxysubsubsection{\texorpdfstring{BeatsPerRotation}{BeatsPerRotation}}
+{\footnotesize\ttfamily \label{_music_box_8cpp_add2db32ff0cbb373ce879935f45ed6e4} 
+const int Beats\+Per\+Rotation = 12}
+
+Number of beats per turn of the music box drum This also determines how many lines to draw on the cylinder 

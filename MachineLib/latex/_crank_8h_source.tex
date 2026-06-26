@@ -1,0 +1,65 @@
+\doxysection{Crank.\+h}
+\hypertarget{_crank_8h_source}{}\label{_crank_8h_source}\mbox{\hyperlink{_crank_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CRANK\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CRANK\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cylinder_8h}{Cylinder.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_polygon_8h}{Polygon.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rotation_source_8h}{RotationSource.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_crank}{Crank}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \textcolor{keywordtype}{double}\ mRotationAngle\ =\ 0.0;\ }
+\DoxyCodeLine{00023\ \ \textcolor{keywordtype}{double}\ mRotationSpeed\ =\ 0.5;\ }
+\DoxyCodeLine{00024\ \ \textcolor{keywordtype}{bool}\ mIsRotating\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \mbox{\hyperlink{classcse335_1_1_cylinder}{cse335::Cylinder}}\ mHandle;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \mbox{\hyperlink{class_rotation_source}{RotationSource}}\ mSource;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \mbox{\hyperlink{class_crank}{Crank}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \mbox{\hyperlink{class_crank}{Crank}}(std::wstring\ resourcesDir);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_a9647bdcbb805b4dc6a91feb3d2258a21}{SetupHandle}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_aa7b49d2b57d474b64d342c66ccc6a79c}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_af364350f296b01ca5e23135f278d0d58}{DrawCrank}}(std::shared\_ptr<wxGraphicsContext>\ graphics);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_ae3c8010e923a065849d8b20d6ad847f7}{DrawHandle}}(std::shared\_ptr<wxGraphicsContext>\ graphics);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_a07823ff7d5151c58db3e7783194a847c}{SetRotationSpeed}}(\textcolor{keywordtype}{double}\ speed)\ \{\ mRotationSpeed\ =\ speed;\ \}}
+\DoxyCodeLine{00067\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_a9c1aba5afaa23e4a2f8176456800503d}{Rotate}}(\textcolor{keywordtype}{double}\ time);}
+\DoxyCodeLine{00071\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_a0fe064101c8149939643388970c35deb}{ToggleRotation}}()\ \{\ mIsRotating\ =\ !mIsRotating;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ wxPoint\ \mbox{\hyperlink{class_crank_a5071beae6c6dab731165d447f99390d8}{CalculateCrankPosition}}()\ \{\ \textcolor{keywordflow}{return}\ wxPoint(0,\ 0);\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_a97d6a8cf42677596d8310b9c088c0cc1}{UpdateHandlePosition}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_a986fd1b2a14a8566f923c41273e9f5d4}{UpdateRotation}}(\textcolor{keywordtype}{double}\ angle);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_a437d87584ec61a1687181dd001fd97ea}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crank_abcef2b36e7ad7580f76681eafd02a010}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \mbox{\hyperlink{class_rotation_source}{RotationSource}}\ *\mbox{\hyperlink{class_crank_a6f73a21dee361a6bc04994843ea7fd42}{GetSource}}()\ \{\ \textcolor{keywordflow}{return}\ \&mSource;\ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CRANK\_H}}
+
+\end{DoxyCode}

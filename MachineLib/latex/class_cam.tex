@@ -1,0 +1,213 @@
+\doxysection{Cam Class Reference}
+\hypertarget{class_cam}{}\label{class_cam}\index{Cam@{Cam}}
+
+
+{\ttfamily \#include $<$Cam.\+h$>$}
+
+Inheritance diagram for Cam\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cam}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cam_a93f0bc8fb9f9c1b8ca7f4076ea4b503f}{Cam}} (std\+::wstring resources\+Dir)
+\item 
+void \mbox{\hyperlink{class_cam_a08b9d49ac27a6402cd962dd19d6193ab}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_cam_ab7ec8914d2234803b1b57063714ba2da}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_cam_a7d71371cc90e199950d9863d7606f4ff}{Update\+Rotation}} (double angle) override
+\item 
+void \mbox{\hyperlink{class_cam_ae5f484b7868ff0f879020aada80f3501}{Setup\+Key}} (std\+::wstring images\+Path)
+\item 
+void \mbox{\hyperlink{class_cam_a9db98922bc24b0de9df21195f42a966f}{Draw\+Cam}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_cam_a2ca36f301c3100488595008912a157c8}{Draw\+Key}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_cam_a2a46d480a6cbdc3725cb794417ef4614}{Set\+Rotation\+Speed}} (double speed)
+\item 
+void \mbox{\hyperlink{class_cam_af0d14bcbc84102a0f071c9d137b8b5f0}{Rotate}} (double delta\+Time)
+\item 
+void \mbox{\hyperlink{class_cam_a6ab3c250abdce6830118bbbffb031ad7}{Trigger\+Key\+Drop}} ()
+\item 
+void \mbox{\hyperlink{class_cam_acf88ef4f75c08c475c42db66905caf9d}{Advance}} (double time) override
+\item 
+void \mbox{\hyperlink{class_cam_aa5774476cb31ba54da7a0316b9845fb4}{Add\+Listener}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_key_drop_listener}{IKey\+Drop\+Listener}} $>$ keydrop\+Listener)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_rotation_sink}{IRotation\+Sink}}}
+
+
+\doxysubsection{Detailed Description}
+Class for the \doxylink{class_cam}{Cam} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cam_a93f0bc8fb9f9c1b8ca7f4076ea4b503f}\index{Cam@{Cam}!Cam@{Cam}}
+\index{Cam@{Cam}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{Cam()}{Cam()}}
+{\footnotesize\ttfamily \label{class_cam_a93f0bc8fb9f9c1b8ca7f4076ea4b503f} 
+Cam\+::\+Cam (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{}\end{DoxyParamCaption})}
+
+Functions for creating a cam object 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources Directory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cam_aa5774476cb31ba54da7a0316b9845fb4}\index{Cam@{Cam}!AddListener@{AddListener}}
+\index{AddListener@{AddListener}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{AddListener()}{AddListener()}}
+{\footnotesize\ttfamily \label{class_cam_aa5774476cb31ba54da7a0316b9845fb4} 
+void Cam\+::\+Add\+Listener (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_key_drop_listener}{IKey\+Drop\+Listener}} $>$}]{keydrop\+Listener}{}\end{DoxyParamCaption})}
+
+Add a listener to the cam 
+\begin{DoxyParams}{Parameters}
+{\em keydrop\+Listener} & listener to be added \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cam_acf88ef4f75c08c475c42db66905caf9d}\index{Cam@{Cam}!Advance@{Advance}}
+\index{Advance@{Advance}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_cam_acf88ef4f75c08c475c42db66905caf9d} 
+void Cam\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the cam object 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_cam_a08b9d49ac27a6402cd962dd19d6193ab}\index{Cam@{Cam}!Draw@{Draw}}
+\index{Draw@{Draw}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_cam_a08b9d49ac27a6402cd962dd19d6193ab} 
+void Cam\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the cam object 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation for the cam object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_cam_a9db98922bc24b0de9df21195f42a966f}\index{Cam@{Cam}!DrawCam@{DrawCam}}
+\index{DrawCam@{DrawCam}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{DrawCam()}{DrawCam()}}
+{\footnotesize\ttfamily \label{class_cam_a9db98922bc24b0de9df21195f42a966f} 
+void Cam\+::\+Draw\+Cam (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+Function to draw the cam \Hypertarget{class_cam_a2ca36f301c3100488595008912a157c8}\index{Cam@{Cam}!DrawKey@{DrawKey}}
+\index{DrawKey@{DrawKey}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{DrawKey()}{DrawKey()}}
+{\footnotesize\ttfamily \label{class_cam_a2ca36f301c3100488595008912a157c8} 
+void Cam\+::\+Draw\+Key (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cam_ab7ec8914d2234803b1b57063714ba2da}\index{Cam@{Cam}!Reset@{Reset}}
+\index{Reset@{Reset}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_cam_ab7ec8914d2234803b1b57063714ba2da} 
+void Cam\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset the cam 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+\Hypertarget{class_cam_af0d14bcbc84102a0f071c9d137b8b5f0}\index{Cam@{Cam}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily \label{class_cam_af0d14bcbc84102a0f071c9d137b8b5f0} 
+void Cam\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+Rotate the cam 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & time elapsed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cam_a2a46d480a6cbdc3725cb794417ef4614}\index{Cam@{Cam}!SetRotationSpeed@{SetRotationSpeed}}
+\index{SetRotationSpeed@{SetRotationSpeed}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{SetRotationSpeed()}{SetRotationSpeed()}}
+{\footnotesize\ttfamily \label{class_cam_a2a46d480a6cbdc3725cb794417ef4614} 
+void Cam\+::\+Set\+Rotation\+Speed (\begin{DoxyParamCaption}\item[{double}]{speed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the rotation speed 
+\begin{DoxyParams}{Parameters}
+{\em speed} & rotation speed to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cam_ae5f484b7868ff0f879020aada80f3501}\index{Cam@{Cam}!SetupKey@{SetupKey}}
+\index{SetupKey@{SetupKey}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{SetupKey()}{SetupKey()}}
+{\footnotesize\ttfamily \label{class_cam_ae5f484b7868ff0f879020aada80f3501} 
+void Cam\+::\+Setup\+Key (\begin{DoxyParamCaption}\item[{std\+::wstring}]{images\+Path}{}\end{DoxyParamCaption})}
+
+Setup the Key 
+\begin{DoxyParams}{Parameters}
+{\em images\+Path} & images\+Path for key \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cam_a6ab3c250abdce6830118bbbffb031ad7}\index{Cam@{Cam}!TriggerKeyDrop@{TriggerKeyDrop}}
+\index{TriggerKeyDrop@{TriggerKeyDrop}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{TriggerKeyDrop()}{TriggerKeyDrop()}}
+{\footnotesize\ttfamily \label{class_cam_a6ab3c250abdce6830118bbbffb031ad7} 
+void Cam\+::\+Trigger\+Key\+Drop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Trigger the key drop for the listeners \Hypertarget{class_cam_a7d71371cc90e199950d9863d7606f4ff}\index{Cam@{Cam}!UpdateRotation@{UpdateRotation}}
+\index{UpdateRotation@{UpdateRotation}!Cam@{Cam}}
+\doxysubsubsection{\texorpdfstring{UpdateRotation()}{UpdateRotation()}}
+{\footnotesize\ttfamily \label{class_cam_a7d71371cc90e199950d9863d7606f4ff} 
+void Cam\+::\+Update\+Rotation (\begin{DoxyParamCaption}\item[{double}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the rotation of the cam 
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle to be updated to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_rotation_sink_a988fc6d56068045851c9c430d1d02fc0}{IRotation\+Sink}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cam_8h}{Cam.\+h}}\item 
+\mbox{\hyperlink{_cam_8cpp}{Cam.\+cpp}}\end{DoxyCompactItemize}

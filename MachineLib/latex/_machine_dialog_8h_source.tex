@@ -1,0 +1,28 @@
+\doxysection{Machine\+Dialog.\+h}
+\hypertarget{_machine_dialog_8h_source}{}\label{_machine_dialog_8h_source}\mbox{\hyperlink{_machine_dialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ CANADIANEXPERIENCE\_MACHINEDIALOG\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ CANADIANEXPERIENCE\_MACHINEDIALOG\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_machine_system}{IMachineSystem}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_machine_dialog}{MachineDialog}}\ :\ \textcolor{keyword}{public}\ wxDialog\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ OnOK(wxCommandEvent\&\ event);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ OnInitDialog(wxInitDialogEvent\&\ event);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::shared\_ptr<IMachineSystem>\ mMachine;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ mMachineNumber;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ wxTextCtrl*\ mMachineNumberCtrl;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_machine_dialog_ab14a0b31292c1ff99280dffba1a4837a}{MachineDialog}}(wxWindow\ *parent,\ std::shared\_ptr<IMachineSystem>\ machineSystem);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CANADIANEXPERIENCE\_MACHINEDIALOG\_H}}
+
+\end{DoxyCode}

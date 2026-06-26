@@ -1,0 +1,132 @@
+\doxysection{Polygon.\+h}
+\hypertarget{_polygon_8h_source}{}\label{_polygon_8h_source}\mbox{\hyperlink{_polygon_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }cse335\ \{}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcse335_1_1_polygon}{Polygon}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ DefaultCircleSteps\ =\ 32;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DrawColorPolygon(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ rotation);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DrawImagePolygon(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ rotation);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ wxGraphicsPath\ mPath;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::vector<wxPoint2DDouble>\ mPoints;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mIsCircle\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ wxBrush\ mBrush;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ Mode\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ Unset,\ Color,\ Image}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ Mode\ mMode\ =\ Mode::Unset;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::unique\_ptr<wxImage>\ mImage;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ wxGraphicsBitmap\ mGraphicsBitmap;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ wxRegion\ mImageClipRegion;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ wxPoint2DDouble\ mImageClipRegionTopLeft;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ wxPoint2DDouble\ mImageClipRegionSize;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mHasDrawn\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mOpacity\ =\ 1.0;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mBitmapDirty\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#ifdef\ POLYGON\_DEFAULT\_INVERTEDY}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mInvertedY\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mInvertedY\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Assert(\textcolor{keywordtype}{bool}\ condition,\ wxString\ msg,\ \textcolor{keyword}{const}\ wxString\&\ url\ =\ wxEmptyString);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//<editor-\/fold\ desc="{}Code\ to\ support\ the\ deferred\ assertion\ message\ box"{}\ defaultstate="{}collapsed"{}>}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }DelayedMessage\ :\ \textcolor{keyword}{public}\ wxTimer\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Notify()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ wxString\ mMessage;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ wxString\ mURL;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mFired\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ DelayedMessage()\ \{\}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Fire(\textcolor{keyword}{const}\ wxString\&\ msg,\ \textcolor{keyword}{const}\ wxString\&\ url\ =\ wxEmptyString);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ std::shared\_ptr<DelayedMessage>\ mDelayedMessage;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//</editor-\/fold>}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcse335_1_1_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}{Polygon}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcse335_1_1_polygon_ace39c67107966db12e13a183f496c3b0}{\string~Polygon}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcse335_1_1_polygon_acf74ec65302b33a0b268dd83c008c3fe}{Polygon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcse335_1_1_polygon}{Polygon}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_acc5131b9bdb5d5c28a94920da633efeb}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcse335_1_1_polygon}{Polygon}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_aba26061e39c4609bde3358851d6727ab}{AddPoint}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_a97b0434b8d4b299a9d6ed7644b76f4cb}{Rectangle}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ width\ =\ 0,\ \textcolor{keywordtype}{double}\ height\ =\ 0);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_ab6d63c9461b9c47536b7643050f84a9e}{Circle}}(\textcolor{keywordtype}{double}\ radius,\ \textcolor{keywordtype}{int}\ steps=DefaultCircleSteps);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_a4b5e67e3d296f776ddc5cea08b03f97a}{CenteredSquare}}(\textcolor{keywordtype}{double}\ size\ =\ 0);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_ab153d5bbee33975ae783d4371e605c13}{SetColor}}(wxColour\ color);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_ad9a85aea0152ee6e57530ebb98bb60aa}{SetImage}}(std::wstring\ filename);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_a267276032c1dd63266208661c71541b4}{DrawPolygon}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ rotation=0);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_a7c1d79cb790c547708bef72e4f067028}{SetOpacity}}(\textcolor{keywordtype}{double}\ opacity);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcse335_1_1_polygon_a723be44fd9baa252fec3de10bdf8b111}{GetImageWidth}}();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcse335_1_1_polygon_ade804a8bd01e28280745a7df475c04ea}{GetImageHeight}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_a7be70b791d97bade2160c0cca375f97f}{BottomCenteredRectangle}}(\textcolor{keywordtype}{double}\ width\ =\ 0,\ \textcolor{keywordtype}{double}\ height\ =\ 0);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_a3cfd2183ea41ad193342b97021ab8575}{BottomCenteredRectangle}}(wxSize\ size)\ \{\ \mbox{\hyperlink{classcse335_1_1_polygon_a3cfd2183ea41ad193342b97021ab8575}{BottomCenteredRectangle}}(size.x,\ size.y);\}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcse335_1_1_polygon_a91b5ca512b9051435b708c765b495bd9}{DrawCrosshair}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{int}\ size\ =\ 10,\ wxColor\ color\ =\ *wxRED);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classcse335_1_1_polygon_aa727c76d4246740b607b6e2424a33056}{AverageLuminance}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ wid,\ \textcolor{keywordtype}{int}\ hit);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcse335_1_1_polygon_a3f4f3c1dfaa41a170da6ec4be4ac7b37}{SetInvertedY}}(\textcolor{keywordtype}{bool}\ inverted)\ \{mInvertedY\ =\ inverted;\}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classcse335_1_1_polygon_ab937fed97038a0738ad59195b3af2a92}{IsCircle}}()\ \{\textcolor{keywordflow}{return}\ mIsCircle;\}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classcse335_1_1_polygon_a76af7c8be19e3e6f5d4fd31a1e3692ae}{Radius}}()\ \{\textcolor{keywordflow}{return}\ mPoints[0].m\_x;\}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ std::vector<wxPoint2DDouble>::iterator\ \mbox{\hyperlink{classcse335_1_1_polygon_a9b97e7904a0ce7c9d310b0fa4f33a584}{begin}}()\ \{\textcolor{keywordflow}{return}\ mPoints.begin();\}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ std::vector<wxPoint2DDouble>::iterator\ \mbox{\hyperlink{classcse335_1_1_polygon_a04f3e2ad34effee18f627ec8a6e03b14}{end}}()\ \{\textcolor{keywordflow}{return}\ mPoints.end();\}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ wxPoint2DDouble\ \mbox{\hyperlink{classcse335_1_1_polygon_a761d9d0534e6ef09f64b5f2a217a2842}{Center}}();}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ wxRect2DDouble\ \mbox{\hyperlink{classcse335_1_1_polygon_ad2d6109bb92d31ffc96a6f908adf00c1}{BoundingBox}}();}
+\DoxyCodeLine{00202\ \ \ \ \ \};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \}}
+
+\end{DoxyCode}

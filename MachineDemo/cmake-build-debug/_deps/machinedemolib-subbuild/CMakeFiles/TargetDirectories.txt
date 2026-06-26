@@ -1,0 +1,3 @@
+D:/Fall 2024 MSU/CSE 335/project2-starter/MachineDemo/cmake-build-debug/_deps/machinedemolib-subbuild/CMakeFiles/machinedemolib-populate.dir
+D:/Fall 2024 MSU/CSE 335/project2-starter/MachineDemo/cmake-build-debug/_deps/machinedemolib-subbuild/CMakeFiles/edit_cache.dir
+D:/Fall 2024 MSU/CSE 335/project2-starter/MachineDemo/cmake-build-debug/_deps/machinedemolib-subbuild/CMakeFiles/rebuild_cache.dir

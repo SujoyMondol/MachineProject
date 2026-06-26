@@ -1,0 +1,192 @@
+\doxysection{Shaft Class Reference}
+\hypertarget{class_shaft}{}\label{class_shaft}\index{Shaft@{Shaft}}
+
+
+{\ttfamily \#include $<$Shaft.\+h$>$}
+
+Inheritance diagram for Shaft\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shaft}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shaft_a19edd021ebd4f5272048ff7bdb7b7add}{Shaft}} (std\+::wstring resources\+Dir, int length)
+\item 
+void \mbox{\hyperlink{class_shaft_ab8d509d571d8c3faaba6cfec99a0f60f}{Draw\+Shaft}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_shaft_a1f54fe505c1d460324925931d22f2003}{Set\+Rotation\+Speed}} (double speed)
+\item 
+void \mbox{\hyperlink{class_shaft_a4342f230aedeb8b246ea031737bbb943}{Rotate}} (double delta\+Time)
+\item 
+void \mbox{\hyperlink{class_shaft_aae5693c75d7e433ad1f0e5d7d2ee07f9}{Toggle\+Rotation}} ()
+\item 
+void \mbox{\hyperlink{class_shaft_af0829d7b05074a0cacaaad5190a427ff}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_shaft_a2eca5b0fc08a3ce911bb888038843009}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_shaft_a63b6783c1b46b464c1a8d33d61668b2e}{Update\+Rotation}} (double angle) override
+\item 
+void \mbox{\hyperlink{class_shaft_ae7e14cee5cc3ffc3a1713637e6e51499}{Advance}} (double time)
+\item 
+\mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shaft_a210935dfcc239596c6df7019d13eda77}{Get\+Rotation\+Source}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_rotation_sink}{IRotation\+Sink}}}
+
+
+\doxysubsection{Detailed Description}
+Class for the \doxylink{class_shaft}{Shaft} component 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shaft_a19edd021ebd4f5272048ff7bdb7b7add}\index{Shaft@{Shaft}!Shaft@{Shaft}}
+\index{Shaft@{Shaft}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{Shaft()}{Shaft()}}
+{\footnotesize\ttfamily \label{class_shaft_a19edd021ebd4f5272048ff7bdb7b7add} 
+Shaft\+::\+Shaft (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{, }\item[{int}]{length}{}\end{DoxyParamCaption})}
+
+Create a shaft object 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources directory \\
+\hline
+{\em length} & length of the shaft \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shaft_ae7e14cee5cc3ffc3a1713637e6e51499}\index{Shaft@{Shaft}!Advance@{Advance}}
+\index{Advance@{Advance}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_shaft_ae7e14cee5cc3ffc3a1713637e6e51499} 
+void Shaft\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update the shaft 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_shaft_a2eca5b0fc08a3ce911bb888038843009}\index{Shaft@{Shaft}!Draw@{Draw}}
+\index{Draw@{Draw}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_shaft_a2eca5b0fc08a3ce911bb888038843009} 
+void Shaft\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the shaft 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation for the object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_shaft_ab8d509d571d8c3faaba6cfec99a0f60f}\index{Shaft@{Shaft}!DrawShaft@{DrawShaft}}
+\index{DrawShaft@{DrawShaft}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{DrawShaft()}{DrawShaft()}}
+{\footnotesize\ttfamily \label{class_shaft_ab8d509d571d8c3faaba6cfec99a0f60f} 
+void Shaft\+::\+Draw\+Shaft (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+Draw the shaft 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context to render to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shaft_a210935dfcc239596c6df7019d13eda77}\index{Shaft@{Shaft}!GetRotationSource@{GetRotationSource}}
+\index{GetRotationSource@{GetRotationSource}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{GetRotationSource()}{GetRotationSource()}}
+{\footnotesize\ttfamily \label{class_shaft_a210935dfcc239596c6df7019d13eda77} 
+\mbox{\hyperlink{class_rotation_source}{Rotation\+Source}} \texorpdfstring{$\ast$}{*} Shaft\+::\+Get\+Rotation\+Source (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the rotation source for the shaft \begin{DoxyReturn}{Returns}
+Rotation Source for the shaft 
+\end{DoxyReturn}
+\Hypertarget{class_shaft_af0829d7b05074a0cacaaad5190a427ff}\index{Shaft@{Shaft}!Reset@{Reset}}
+\index{Reset@{Reset}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_shaft_af0829d7b05074a0cacaaad5190a427ff} 
+void Shaft\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset the shaft 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+\Hypertarget{class_shaft_a4342f230aedeb8b246ea031737bbb943}\index{Shaft@{Shaft}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily \label{class_shaft_a4342f230aedeb8b246ea031737bbb943} 
+void Shaft\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+Rotate the shaft 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & time elapsed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shaft_a1f54fe505c1d460324925931d22f2003}\index{Shaft@{Shaft}!SetRotationSpeed@{SetRotationSpeed}}
+\index{SetRotationSpeed@{SetRotationSpeed}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{SetRotationSpeed()}{SetRotationSpeed()}}
+{\footnotesize\ttfamily \label{class_shaft_a1f54fe505c1d460324925931d22f2003} 
+void Shaft\+::\+Set\+Rotation\+Speed (\begin{DoxyParamCaption}\item[{double}]{speed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the Rotation Speed of the shaft 
+\begin{DoxyParams}{Parameters}
+{\em speed} & speed to be set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shaft_aae5693c75d7e433ad1f0e5d7d2ee07f9}\index{Shaft@{Shaft}!ToggleRotation@{ToggleRotation}}
+\index{ToggleRotation@{ToggleRotation}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{ToggleRotation()}{ToggleRotation()}}
+{\footnotesize\ttfamily \label{class_shaft_aae5693c75d7e433ad1f0e5d7d2ee07f9} 
+void Shaft\+::\+Toggle\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Toggle rotating state for the shaft \Hypertarget{class_shaft_a63b6783c1b46b464c1a8d33d61668b2e}\index{Shaft@{Shaft}!UpdateRotation@{UpdateRotation}}
+\index{UpdateRotation@{UpdateRotation}!Shaft@{Shaft}}
+\doxysubsubsection{\texorpdfstring{UpdateRotation()}{UpdateRotation()}}
+{\footnotesize\ttfamily \label{class_shaft_a63b6783c1b46b464c1a8d33d61668b2e} 
+void Shaft\+::\+Update\+Rotation (\begin{DoxyParamCaption}\item[{double}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the rotation of the shaft 
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle to be set to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_rotation_sink_a988fc6d56068045851c9c430d1d02fc0}{IRotation\+Sink}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_shaft_8h}{Shaft.\+h}}\item 
+\mbox{\hyperlink{_shaft_8cpp}{Shaft.\+cpp}}\end{DoxyCompactItemize}

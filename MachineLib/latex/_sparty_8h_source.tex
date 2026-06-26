@@ -1,0 +1,70 @@
+\doxysection{Sparty.\+h}
+\hypertarget{_sparty_8h_source}{}\label{_sparty_8h_source}\mbox{\hyperlink{_sparty_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SPARTY\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SPARTY\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_polygon_8h}{Polygon.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_key_drop_listener_8h}{IKeyDropListener.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sparty}{Sparty}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_key_drop_listener}{IKeyDropListener}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mSparty;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \textcolor{keywordtype}{double}\ mSpringCompressedLength;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \textcolor{keywordtype}{double}\ mSpringDecompressedLength;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \textcolor{keywordtype}{double}\ mSpringLength;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \textcolor{keywordtype}{int}\ mSpringWidth;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \textcolor{keywordtype}{int}\ mNumLinks;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ wxColour\ mSpringColour;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \textcolor{keywordtype}{int}\ mSpartySize;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \textcolor{keywordtype}{bool}\ mPopup\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \textcolor{keywordtype}{double}\ mAngle\ =\ 0.0;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \textcolor{keywordtype}{double}\ mBounceOffset\ =\ 0.0;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \textcolor{keywordtype}{double}\ mRotation\ =\ 0.0;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \textcolor{keywordtype}{bool}\ mSwing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \textcolor{keywordtype}{bool}\ mDown\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \mbox{\hyperlink{class_sparty_abb730ae55a876f554834322983a82c4a}{Sparty}}(std::wstring\ ImagePath,\textcolor{keywordtype}{int}\ spartyNum,\ \textcolor{keywordtype}{int}\ size,\ \textcolor{keywordtype}{int}\ decompressedLength,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ numLinks);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sparty_ad190f1fee82ba994e5d4938feb2d4439}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sparty_a7bba950aec06aea1934143486d762782}{DrawSpring}}(std::shared\_ptr<wxGraphicsContext>\ graphics);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sparty_a9d9bc66bb32b4480198902f5dba52993}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sparty_a494487efd51ede4a0b75fa3c6cf3cea8}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sparty_a61bfd693bdb339c325725c874786e29a}{KeyDropTriggered}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sparty_a7dde84572a6adaa04c78cacdb6fe3f73}{Bounce}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SPARTY\_H}}
+
+\end{DoxyCode}

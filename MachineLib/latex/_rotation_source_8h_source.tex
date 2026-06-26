@@ -1,0 +1,35 @@
+\doxysection{Rotation\+Source.\+h}
+\hypertarget{_rotation_source_8h_source}{}\label{_rotation_source_8h_source}\mbox{\hyperlink{_rotation_source_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ROTATIONSOURCE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ROTATIONSOURCE\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_rotation_sink}{IRotationSink}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rotation_source}{RotationSource}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ std::vector<std::shared\_ptr<IRotationSink>>\ mSinks;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \mbox{\hyperlink{class_rotation_source_a2a0bf9d36ce60099a378792c2c1b58df}{RotationSource}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rotation_source}{RotationSource}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rotation_source_acd4b26bcc29b16ba3b4fbad3e40c003b}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rotation_source}{RotationSource}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \mbox{\hyperlink{class_rotation_source}{RotationSource}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rotation_source_a2b9fd05631e0165aa32602c83452349f}{SetRotation}}(\textcolor{keywordtype}{double}\ angle);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rotation_source_a8da6a3af54026cd2fc6d8b702e04dd6c}{AddSink}}(std::shared\_ptr<IRotationSink>\ sink);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ROTATIONSOURCE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,158 @@
+\doxysection{Sparty Class Reference}
+\hypertarget{class_sparty}{}\label{class_sparty}\index{Sparty@{Sparty}}
+
+
+{\ttfamily \#include $<$Sparty.\+h$>$}
+
+Inheritance diagram for Sparty\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sparty}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sparty_abb730ae55a876f554834322983a82c4a}{Sparty}} (std\+::wstring Image\+Path, int sparty\+Num, int size, int decompressed\+Length, int width, int num\+Links)
+\item 
+void \mbox{\hyperlink{class_sparty_ad190f1fee82ba994e5d4938feb2d4439}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_sparty_a7bba950aec06aea1934143486d762782}{Draw\+Spring}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_sparty_a9d9bc66bb32b4480198902f5dba52993}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_sparty_a494487efd51ede4a0b75fa3c6cf3cea8}{Advance}} (double time) override
+\item 
+void \mbox{\hyperlink{class_sparty_a61bfd693bdb339c325725c874786e29a}{Key\+Drop\+Triggered}} () override
+\item 
+void \mbox{\hyperlink{class_sparty_a7dde84572a6adaa04c78cacdb6fe3f73}{Bounce}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_key_drop_listener}{IKey\+Drop\+Listener}}}
+
+
+\doxysubsection{Detailed Description}
+Class for the sparty component 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sparty_abb730ae55a876f554834322983a82c4a}\index{Sparty@{Sparty}!Sparty@{Sparty}}
+\index{Sparty@{Sparty}!Sparty@{Sparty}}
+\doxysubsubsection{\texorpdfstring{Sparty()}{Sparty()}}
+{\footnotesize\ttfamily \label{class_sparty_abb730ae55a876f554834322983a82c4a} 
+Sparty\+::\+Sparty (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{, }\item[{int}]{sparty\+Num}{, }\item[{int}]{size}{, }\item[{int}]{decompressed\+Length}{, }\item[{int}]{width}{, }\item[{int}]{num\+Links}{}\end{DoxyParamCaption})}
+
+Create the \doxylink{class_sparty}{Sparty} Object 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources directory \\
+\hline
+{\em sparty\+Num} & determines which sparty image to pick \\
+\hline
+{\em size} & size of the sparty image \\
+\hline
+{\em decompressed\+Length} & decompressed Length of the spring \\
+\hline
+{\em width} & width of the spring \\
+\hline
+{\em num\+Links} & number of links of the spring \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sparty_a494487efd51ede4a0b75fa3c6cf3cea8}\index{Sparty@{Sparty}!Advance@{Advance}}
+\index{Advance@{Advance}!Sparty@{Sparty}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_sparty_a494487efd51ede4a0b75fa3c6cf3cea8} 
+void Sparty\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update sparty 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_sparty_a7dde84572a6adaa04c78cacdb6fe3f73}\index{Sparty@{Sparty}!Bounce@{Bounce}}
+\index{Bounce@{Bounce}!Sparty@{Sparty}}
+\doxysubsubsection{\texorpdfstring{Bounce()}{Bounce()}}
+{\footnotesize\ttfamily \label{class_sparty_a7dde84572a6adaa04c78cacdb6fe3f73} 
+void Sparty\+::\+Bounce (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Cause the \doxylink{class_sparty}{Sparty} to bounce \Hypertarget{class_sparty_ad190f1fee82ba994e5d4938feb2d4439}\index{Sparty@{Sparty}!Draw@{Draw}}
+\index{Draw@{Draw}!Sparty@{Sparty}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_sparty_ad190f1fee82ba994e5d4938feb2d4439} 
+void Sparty\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the sparty and spring 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & rotation for this object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_sparty_a7bba950aec06aea1934143486d762782}\index{Sparty@{Sparty}!DrawSpring@{DrawSpring}}
+\index{DrawSpring@{DrawSpring}!Sparty@{Sparty}}
+\doxysubsubsection{\texorpdfstring{DrawSpring()}{DrawSpring()}}
+{\footnotesize\ttfamily \label{class_sparty_a7bba950aec06aea1934143486d762782} 
+void Sparty\+::\+Draw\+Spring (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+Draw a spring. 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Graphics context to render to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sparty_a61bfd693bdb339c325725c874786e29a}\index{Sparty@{Sparty}!KeyDropTriggered@{KeyDropTriggered}}
+\index{KeyDropTriggered@{KeyDropTriggered}!Sparty@{Sparty}}
+\doxysubsubsection{\texorpdfstring{KeyDropTriggered()}{KeyDropTriggered()}}
+{\footnotesize\ttfamily \label{class_sparty_a61bfd693bdb339c325725c874786e29a} 
+void Sparty\+::\+Key\+Drop\+Triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Start the popping up of sparty when the key is dropped 
+
+Implements \mbox{\hyperlink{class_i_key_drop_listener_a26c9b321107fabc04fce05f200311c77}{IKey\+Drop\+Listener}}.
+
+\Hypertarget{class_sparty_a9d9bc66bb32b4480198902f5dba52993}\index{Sparty@{Sparty}!Reset@{Reset}}
+\index{Reset@{Reset}!Sparty@{Sparty}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_sparty_a9d9bc66bb32b4480198902f5dba52993} 
+void Sparty\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset the \doxylink{class_sparty}{Sparty} Object 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sparty_8h}{Sparty.\+h}}\item 
+\mbox{\hyperlink{_sparty_8cpp}{Sparty.\+cpp}}\end{DoxyCompactItemize}

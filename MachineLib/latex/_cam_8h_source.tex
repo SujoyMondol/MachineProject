@@ -1,0 +1,81 @@
+\doxysection{Cam.\+h}
+\hypertarget{_cam_8h_source}{}\label{_cam_8h_source}\mbox{\hyperlink{_cam_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CAM\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CAM\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_rotation_sink_8h}{IRotationSink.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_polygon_8h}{Polygon.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cylinder_8h}{Cylinder.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_key_drop_listener}{IKeyDropListener}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cam}{Cam}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_rotation_sink}{IRotationSink}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mKey;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \mbox{\hyperlink{classcse335_1_1_cylinder}{cse335::Cylinder}}\ mCylinder;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \mbox{\hyperlink{classcse335_1_1_polygon}{cse335::Polygon}}\ mKeyHole;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \textcolor{keywordtype}{int}\ mKeyDrop\ =\ 0;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \textcolor{keywordtype}{int}\ mKeyHoleOffset\ =\ 0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \textcolor{keywordtype}{double}\ mRotationAngle\ =\ 0.0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \textcolor{keywordtype}{double}\ mRotationSpeed;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \textcolor{keywordtype}{bool}\ mKeyIsDropped\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \textcolor{keywordtype}{bool}\ mKeyHoleStop\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ std::vector<std::shared\_ptr<IKeyDropListener>>\ mListeners;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \mbox{\hyperlink{class_cam}{Cam}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \mbox{\hyperlink{class_cam}{Cam}}(std::wstring\ resourcesDir);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_a08b9d49ac27a6402cd962dd19d6193ab}{Draw}}(std::shared\_ptr<wxGraphicsContext>\ graphics,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ rotation)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_ab7ec8914d2234803b1b57063714ba2da}{Reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_a7d71371cc90e199950d9863d7606f4ff}{UpdateRotation}}(\textcolor{keywordtype}{double}\ angle)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_ae5f484b7868ff0f879020aada80f3501}{SetupKey}}(std::wstring\ imagesPath);}
+\DoxyCodeLine{00078\ \ }
+\DoxyCodeLine{00083\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_a9db98922bc24b0de9df21195f42a966f}{DrawCam}}(std::shared\_ptr<wxGraphicsContext>\ graphics);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_a2ca36f301c3100488595008912a157c8}{DrawKey}}(std::shared\_ptr<wxGraphicsContext>\ graphics);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_a2a46d480a6cbdc3725cb794417ef4614}{SetRotationSpeed}}(\textcolor{keywordtype}{double}\ speed)\ \{\ mRotationSpeed\ =\ speed;\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_af0d14bcbc84102a0f071c9d137b8b5f0}{Rotate}}(\textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_a6ab3c250abdce6830118bbbffb031ad7}{TriggerKeyDrop}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_acf88ef4f75c08c475c42db66905caf9d}{Advance}}(\textcolor{keywordtype}{double}\ time)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cam_aa5774476cb31ba54da7a0316b9845fb4}{AddListener}}(std::shared\_ptr<IKeyDropListener>\ keydropListener);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CAM\_H}}
+
+\end{DoxyCode}

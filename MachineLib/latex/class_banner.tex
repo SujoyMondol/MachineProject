@@ -1,0 +1,114 @@
+\doxysection{Banner Class Reference}
+\hypertarget{class_banner}{}\label{class_banner}\index{Banner@{Banner}}
+
+
+{\ttfamily \#include $<$Banner.\+h$>$}
+
+Inheritance diagram for Banner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_banner}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_banner_ad8ea2ca676b75ba2463ba03a3f458c6a}{Banner}} (std\+::wstring resources\+Dir)
+\item 
+void \mbox{\hyperlink{class_banner_ae450f11e323861794c0c5a59f6d943a2}{Draw}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics, int x, int y, int rotation) override
+\item 
+void \mbox{\hyperlink{class_banner_a4f6a6733ba0a1e479aa053e6eac58520}{Reset}} () override
+\item 
+void \mbox{\hyperlink{class_banner_a43b9efacd3ddcbfeb49eff328e6bc469}{Advance}} (double time) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a1a16957bf5c97251de7babaf3622aecd}{Component}} (std\+::wstring resources\+Dir)
+\item 
+virtual void \mbox{\hyperlink{class_component_af46ab1e758de59cecf5c1c08bb9867ea}{Set\+Initial\+Position}} (wx\+Point point)
+\item 
+void \mbox{\hyperlink{class_component_ac2a73386ef34a64aeff1904dda2303b8}{Set\+Position}} (wx\+Point position)
+\item 
+wx\+Point \mbox{\hyperlink{class_component_a42cd4e931222661802597125bfc8d28b}{Get\+Position}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad492f16187d49151d3b6403bbadb685a}{Set\+Frame}} (double frame)
+\item 
+virtual void \mbox{\hyperlink{class_component_a49a9ae6c5b4694018b08301f0ec8f6a1}{Set\+Time}} (double time)
+\item 
+void \mbox{\hyperlink{class_component_a3ab24fc52fb5b6b2242064f93327de4e}{Set\+Machine}} (\mbox{\hyperlink{class_machine}{Machine}} \texorpdfstring{$\ast$}{*}machine)
+\item 
+std\+::wstring \mbox{\hyperlink{class_component_a97b1036a256e5fc0133167b4f9b4081b}{Get\+Images\+Dir}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_banner}{Banner} for \doxylink{class_machine}{Machine} 2 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_banner_ad8ea2ca676b75ba2463ba03a3f458c6a}\index{Banner@{Banner}!Banner@{Banner}}
+\index{Banner@{Banner}!Banner@{Banner}}
+\doxysubsubsection{\texorpdfstring{Banner()}{Banner()}}
+{\footnotesize\ttfamily \label{class_banner_ad8ea2ca676b75ba2463ba03a3f458c6a} 
+Banner\+::\+Banner (\begin{DoxyParamCaption}\item[{std\+::wstring}]{resources\+Dir}{}\end{DoxyParamCaption})}
+
+Constructor for creating \doxylink{class_banner}{Banner} 
+\begin{DoxyParams}{Parameters}
+{\em resources\+Dir} & resources Directory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_banner_a43b9efacd3ddcbfeb49eff328e6bc469}\index{Banner@{Banner}!Advance@{Advance}}
+\index{Advance@{Advance}!Banner@{Banner}}
+\doxysubsubsection{\texorpdfstring{Advance()}{Advance()}}
+{\footnotesize\ttfamily \label{class_banner_a43b9efacd3ddcbfeb49eff328e6bc469} 
+void Banner\+::\+Advance (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Updates the scale of the banner 
+\begin{DoxyParams}{Parameters}
+{\em time} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_component_adeb2c552de6fae5ddba728a6ee0f52cd}{Component}}.
+
+\Hypertarget{class_banner_ae450f11e323861794c0c5a59f6d943a2}\index{Banner@{Banner}!Draw@{Draw}}
+\index{Draw@{Draw}!Banner@{Banner}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_banner_ae450f11e323861794c0c5a59f6d943a2} 
+void Banner\+::\+Draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the \doxylink{class_banner}{Banner} 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics context object used for drawing \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em rotation} & amount to rotate the banner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component_a6a6490d9e5050b4a53718e037f94f28c}{Component}}.
+
+\Hypertarget{class_banner_a4f6a6733ba0a1e479aa053e6eac58520}\index{Banner@{Banner}!Reset@{Reset}}
+\index{Reset@{Reset}!Banner@{Banner}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_banner_a4f6a6733ba0a1e479aa053e6eac58520} 
+void Banner\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset the scale of the banner to be displayed 
+
+Implements \mbox{\hyperlink{class_component_a231f37626a6760c59fe4cd2a52222694}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_banner_8h}{Banner.\+h}}\item 
+\mbox{\hyperlink{_banner_8cpp}{Banner.\+cpp}}\end{DoxyCompactItemize}

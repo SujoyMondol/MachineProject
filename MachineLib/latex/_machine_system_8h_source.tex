@@ -1,0 +1,76 @@
+\doxysection{Machine\+System.\+h}
+\hypertarget{_machine_system_8h_source}{}\label{_machine_system_8h_source}\mbox{\hyperlink{_machine_system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MACHINESYSTEM\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MACHINESYSTEM\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_machine_system_8h}{IMachineSystem.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_machine_8h}{Machine.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_machine}{Machine}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_machine_system}{MachineSystem}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_machine_system}{IMachineSystem}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ wxPoint\ mLocation;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \textcolor{keywordtype}{int}\ mFrame\ =\ 500;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \textcolor{keywordtype}{double}\ mFrameRate;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \textcolor{keywordtype}{int}\ mMachineNumber\ =\ 1;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \textcolor{keywordtype}{int}\ mFlag;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \textcolor{keywordtype}{double}\ mMachineTime\ =\ 0.0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ std::shared\_ptr<Machine>\ mMachine\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ std::wstring\ mResourcesDir;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \mbox{\hyperlink{class_machine_system}{MachineSystem}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \mbox{\hyperlink{class_machine_system}{MachineSystem}}(std::wstring\ resourcesDir);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_ade04c5dfef68cfe59adbfa3e92d3edfb}{SetLocation}}(wxPoint\ location)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ wxPoint\ \mbox{\hyperlink{class_machine_system_abc6e36c5f511c2281b0c0bdeb59849fc}{GetLocation}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ mLocation;\};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_a96fe14bfcdb789abace1bc0694d1cfe9}{DrawMachine}}(std::shared\_ptr<wxGraphicsContext>\ graphics)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_a4463c3517a05a41dff082ba005e5c393}{SetMachineFrame}}(\textcolor{keywordtype}{int}\ frame)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_a57114998f114ba3068298e221923afc1}{SetFrameRate}}(\textcolor{keywordtype}{double}\ rate)\textcolor{keyword}{\ override\ }\{\ mFrameRate\ =\ rate;\};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_ab8ace26c73576b6cda21b12753481510}{ChooseMachine}}(\textcolor{keywordtype}{int}\ machine)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_machine_system_a23ade6abb8275caa1e33c96be71d98ff}{GetMachineNumber}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ mMachineNumber;\}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_machine_system_ab9034793ef8955ed1638c32ebf303d83}{GetMachineTime}}()\textcolor{keyword}{\ override\ }\{\textcolor{keywordflow}{return}\ mMachineTime;\}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_a6be0185b2940442b289ef8a7b71f9f62}{SetFlag}}(\textcolor{keywordtype}{int}\ flag)\textcolor{keyword}{\ override\ }\{mFlag\ =\ flag;\};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_aee112285fe051ff24e6ce8a959d46964}{SetMachine}}(std::shared\_ptr<Machine>\ machine);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ std::shared\_ptr<Machine>\ \mbox{\hyperlink{class_machine_system_a38e9b5a4432a5ade83b41a8bcb4d677d}{GetMachine}}()\ \{\ \textcolor{keywordflow}{return}\ mMachine;\}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_system_a9db011105701898fe321022d293ff765}{Reset}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MACHINESYSTEM\_H}}
+
+\end{DoxyCode}

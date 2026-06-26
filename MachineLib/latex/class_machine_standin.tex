@@ -1,0 +1,108 @@
+\doxysection{Machine\+Standin Class Reference}
+\hypertarget{class_machine_standin}{}\label{class_machine_standin}\index{MachineStandin@{MachineStandin}}
+
+
+{\ttfamily \#include $<$Machine\+Standin.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_machine_standin_af86990b8883beb917047bf871a8f464c}{Machine\+Standin}} ()
+\item 
+void \mbox{\hyperlink{class_machine_standin_a380cfa65d092f5bf9e9af8ada391310e}{Set\+Location}} (wx\+Point location)
+\item 
+wx\+Point \mbox{\hyperlink{class_machine_standin_ab0976b88c6539eb8e111a3cd2cb82e03}{Get\+Location}} ()
+\item 
+void \mbox{\hyperlink{class_machine_standin_a6ca256d5149f7bf1d65ac9988f73baf2}{Draw\+Machine}} (std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$ graphics)
+\item 
+void \mbox{\hyperlink{class_machine_standin_a68e31f38a76b2c6c84929f773bf51fc3}{Set\+Machine\+Frame}} (int frame)
+\item 
+void \mbox{\hyperlink{class_machine_standin_a9d29876b659f2e92df9d9e98d950ab58}{Set\+Machine}} (int machine)
+\item 
+int \mbox{\hyperlink{class_machine_standin_a0add5a7295cf9330aa3404aaa1cd644e}{Get\+Machine}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a stand-\/in class that will allow you to develop the machine adapter class first if you so choose.
+
+DO NOT CHANGE THIS FILE! 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_machine_standin_af86990b8883beb917047bf871a8f464c}\index{MachineStandin@{MachineStandin}!MachineStandin@{MachineStandin}}
+\index{MachineStandin@{MachineStandin}!MachineStandin@{MachineStandin}}
+\doxysubsubsection{\texorpdfstring{MachineStandin()}{MachineStandin()}}
+{\footnotesize\ttfamily \label{class_machine_standin_af86990b8883beb917047bf871a8f464c} 
+Machine\+Standin\+::\+Machine\+Standin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Constructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_machine_standin_a6ca256d5149f7bf1d65ac9988f73baf2}\index{MachineStandin@{MachineStandin}!DrawMachine@{DrawMachine}}
+\index{DrawMachine@{DrawMachine}!MachineStandin@{MachineStandin}}
+\doxysubsubsection{\texorpdfstring{DrawMachine()}{DrawMachine()}}
+{\footnotesize\ttfamily \label{class_machine_standin_a6ca256d5149f7bf1d65ac9988f73baf2} 
+void Machine\+Standin\+::\+Draw\+Machine (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ wx\+Graphics\+Context $>$}]{graphics}{}\end{DoxyParamCaption})}
+
+Draw the machine at the currently specified location 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Graphics object to render to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_standin_ab0976b88c6539eb8e111a3cd2cb82e03}\index{MachineStandin@{MachineStandin}!GetLocation@{GetLocation}}
+\index{GetLocation@{GetLocation}!MachineStandin@{MachineStandin}}
+\doxysubsubsection{\texorpdfstring{GetLocation()}{GetLocation()}}
+{\footnotesize\ttfamily \label{class_machine_standin_ab0976b88c6539eb8e111a3cd2cb82e03} 
+wx\+Point Machine\+Standin\+::\+Get\+Location (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the root position of the machine \begin{DoxyReturn}{Returns}
+location x,y in pixels as a point 
+\end{DoxyReturn}
+\Hypertarget{class_machine_standin_a0add5a7295cf9330aa3404aaa1cd644e}\index{MachineStandin@{MachineStandin}!GetMachine@{GetMachine}}
+\index{GetMachine@{GetMachine}!MachineStandin@{MachineStandin}}
+\doxysubsubsection{\texorpdfstring{GetMachine()}{GetMachine()}}
+{\footnotesize\ttfamily \label{class_machine_standin_a0add5a7295cf9330aa3404aaa1cd644e} 
+int Machine\+Standin\+::\+Get\+Machine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the current machine number \begin{DoxyReturn}{Returns}
+\doxylink{class_machine}{Machine} number 
+\end{DoxyReturn}
+\Hypertarget{class_machine_standin_a380cfa65d092f5bf9e9af8ada391310e}\index{MachineStandin@{MachineStandin}!SetLocation@{SetLocation}}
+\index{SetLocation@{SetLocation}!MachineStandin@{MachineStandin}}
+\doxysubsubsection{\texorpdfstring{SetLocation()}{SetLocation()}}
+{\footnotesize\ttfamily \label{class_machine_standin_a380cfa65d092f5bf9e9af8ada391310e} 
+void Machine\+Standin\+::\+Set\+Location (\begin{DoxyParamCaption}\item[{wx\+Point}]{location}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the position for the root of the machine 
+\begin{DoxyParams}{Parameters}
+{\em location} & X,Y location in pixels \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_standin_a9d29876b659f2e92df9d9e98d950ab58}\index{MachineStandin@{MachineStandin}!SetMachine@{SetMachine}}
+\index{SetMachine@{SetMachine}!MachineStandin@{MachineStandin}}
+\doxysubsubsection{\texorpdfstring{SetMachine()}{SetMachine()}}
+{\footnotesize\ttfamily \label{class_machine_standin_a9d29876b659f2e92df9d9e98d950ab58} 
+void Machine\+Standin\+::\+Set\+Machine (\begin{DoxyParamCaption}\item[{int}]{machine}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the machine number 
+\begin{DoxyParams}{Parameters}
+{\em machine} & An integer number. Each integer makes a different machine \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_standin_a68e31f38a76b2c6c84929f773bf51fc3}\index{MachineStandin@{MachineStandin}!SetMachineFrame@{SetMachineFrame}}
+\index{SetMachineFrame@{SetMachineFrame}!MachineStandin@{MachineStandin}}
+\doxysubsubsection{\texorpdfstring{SetMachineFrame()}{SetMachineFrame()}}
+{\footnotesize\ttfamily \label{class_machine_standin_a68e31f38a76b2c6c84929f773bf51fc3} 
+void Machine\+Standin\+::\+Set\+Machine\+Frame (\begin{DoxyParamCaption}\item[{int}]{frame}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the current machine animation frame 
+\begin{DoxyParams}{Parameters}
+{\em frame} & Frame number \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_machine_standin_8h}{Machine\+Standin.\+h}}\item 
+\mbox{\hyperlink{_machine_standin_8cpp}{Machine\+Standin.\+cpp}}\end{DoxyCompactItemize}
